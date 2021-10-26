@@ -1,15 +1,29 @@
 import React from 'react';
 import { observer } from "mobx-react";
-
-import Button from '../UI/ButtonComponent';
+import SchoolComponent from '../School/SchoolComponent';
+/*
+import ProgramComponent from '../Program/ProgramComponent';
+import TeachersComponent from '../Teachers/TeachersComponent';
+import AdmissionComponent from '../Admission/AdmissionComponent';
+import ContactComponent from '../Contact/ContactComponent';
+import ScholarshipComponent from '../Scholarship/ScholarshipComponent';
+*/
 
 const MainComponent = observer(() => {
 
     return(
-        <div>
-            <Button />
-        </div>
+        <React.Fragment>
+            <SchoolComponent />
+        </React.Fragment>
     );
+
+/*
+<ProgramComponent />
+<TeachersComponent />
+<AdmissionComponent />
+<ContactComponent />
+<ScholarshipComponent />
+*/
     
 });
 

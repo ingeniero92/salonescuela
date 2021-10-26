@@ -8,7 +8,10 @@ class Header extends BaseComponent {
 
     render(){
         return(
-            <h1>Titulo - {this.store.appStore.value}</h1>
+            <header>
+                <span>SALØNESCUELA</span>
+                <i className="fa fa-bars"></i>
+            </header>
         );
     }
 

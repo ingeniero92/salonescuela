@@ -8,7 +8,7 @@ class Footer extends BaseComponent {
 
     render(){
         return(
-            <h1>Footer - {this.store.appStore.value}</h1>
+            <div></div>
         );
     }
 
