@@ -8,7 +8,7 @@ class Footer extends BaseComponent {
 
     render(){
         return(
-            <div></div>
+            <footer></footer>
         );
     }
 

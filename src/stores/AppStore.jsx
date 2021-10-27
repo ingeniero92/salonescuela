@@ -3,15 +3,19 @@ import { makeAutoObservable} from "mobx";
 export class AppStore {
 
     rootStore;
-    value = 0;
+    modalIsOpen = 0;
 
     constructor(rootStore) {
         makeAutoObservable(this);
         this.rootStore = rootStore;
     }
 
-    increment(){
-        this.value++;
+    toggleModal(){
+        this.modalIsOpen = !this.modalIsOpen;
+    }
+
+    closeModal(){
+        this.modalIsOpen = false;
     }
 
 }

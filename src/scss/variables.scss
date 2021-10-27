@@ -2,16 +2,20 @@
 
 $font-stack: "GTAmerica", "Roboto", monospace, sans-serif;
 
+$width-page: 600px;
+
 $color-primary: white;
 $color-secondary: rgb(0,255,153);
+$color-terciary: rgb(51,51,51);
 
 $menu-color: rgb(51,51,51);
 $background-color: rgb(133,84,84);
 $pixel-color: #666666;
 
-$padding-primary: 1%;
-$padding-secondary: 4%;
-$padding-terciary: 6%;
+$padding-primary: 0.25rem;
+$padding-secondary: 1rem;
+$padding-terciary: 4rem;
+$padding-section: 4rem;
 
 $font-size-primary: 1rem;
 $font-size-secondary: 0.85rem;

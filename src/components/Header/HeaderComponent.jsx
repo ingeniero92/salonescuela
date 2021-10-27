@@ -9,8 +9,10 @@ class Header extends BaseComponent {
     render(){
         return(
             <header>
-                <span>SALØNESCUELA</span>
-                <i className="fa fa-bars"></i>
+                <div className="content">
+                    <span>SALØNESCUELA</span>
+                    <i onClick={ () => this.store.appStore.toggleModal()} className="fa fa-bars"></i>
+                </div>
             </header>
         );
     }
