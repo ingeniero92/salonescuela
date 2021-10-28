@@ -3,12 +3,21 @@ import { observer } from "mobx-react";
 
 import LadderTextComponent from '../UI/LadderTextComponent';
 import GoogleMapsComponent from '../UI/GoogleMapsComponent';
+import SocialNetworksComponent from '../UI/SocialNetworksComponent';
 
 const ContactComponent = observer(() => {
 
+    const twitter   = ""; // TODO
+    const facebook  = ""; // TODO
+    const instagram = ""; // TODO
+    const linkedin  = ""; // TODO
+
     return(
-        <section className="section contact">
+        <section className="section contact" name="contact">
             <span className="title">CONTACTO</span>
+            <div className="socialNetworks">
+                <SocialNetworksComponent twitter={twitter} facebook={facebook} instagram={instagram} linkedin={linkedin}/>
+            </div>
             <LadderTextComponent 
                 firstText  = {"Solicita información sobre nuestros cursos, o envíanos cualquier comentario referente a nuestro curso."}
             />
@@ -21,6 +30,9 @@ const ContactComponent = observer(() => {
             <div className="map">
                 <GoogleMapsComponent />
             </div>     
+            <div className="socialNetworks">
+                <SocialNetworksComponent twitter={twitter} facebook={facebook} instagram={instagram} linkedin={linkedin}/>
+            </div>
         </section>
     );
     

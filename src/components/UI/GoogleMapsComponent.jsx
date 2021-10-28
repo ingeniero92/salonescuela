@@ -1,6 +1,8 @@
 import React, {useState } from 'react'
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 
+const googleMapsApiKey="AIzaSyCksfw0oCEJMGLnrfNLFGebuTzNxipgIX0a"; // TODO
+
 const containerStyle = {
     width: '100%',
     height: '100%'
@@ -22,7 +24,7 @@ function MyComponent() {
 
     return (
     <LoadScript
-        googleMapsApiKey="AIzaSyCksfw0oCEJMGLnrfNLFGebuTzNxipgIX0a"
+        googleMapsApiKey={googleMapsApiKey}
     >
         <GoogleMap
             mapContainerStyle={containerStyle}

@@ -9,12 +9,16 @@ body {
     margin: 0;
     color: $color-primary;
     background-color: $background-color;
+    background-image: url("/media/img/fondo.png");
+    background-size: 400%;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 /* MAIN CONTENT */
 
 .main-content {
-
+    display: block;
 }
 
 /* SECTION */
@@ -47,6 +51,10 @@ header {
     position: fixed;
     width: 100%;
     background-color: $menu-color;
+    background-image: url("/media/img/fondo.png");
+    background-size: 200%;
+    background-position: center center;
+    background-repeat: no-repeat;
 
     .content {
 
@@ -60,6 +68,7 @@ header {
         margin: 0 auto;
 
         span {
+            cursor: pointer;
             padding-left: $padding-primary;
         }
     
@@ -98,25 +107,61 @@ footer {
     opacity: 0;
 }
 
-.menu {
+.menu-modal{
 
+    width: 100%;
+    height: 100%;
+    background-image: url("/media/img/fondo.png");
+    background-color: $color-terciary;
+    background-size: 400%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    inset: 0px;
+    padding: 0%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
 
-    a, span, .link {
-        cursor: pointer;
-        color: $color-primary;
-        font-size: 3rem;
-        text-decoration: none;
+    .menu {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    
+        a, span, .link {
+            cursor: pointer;
+            color: $color-primary;
+            font-size: $font-size-big;
+            text-decoration: none;
+        }
+    
+        .link:hover {
+            font-weight: bold;
+        }
+
+        i {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: $color-secondary;
+            cursor: pointer;   
+            font-size: $font-size-big;
+        }
+    
     }
+}
 
-    .link:hover {
-        font-weight: bold;
-    }
-
+@media (min-width: 900px) {
+    .menu-modal{
+        .menu {
+            a, span, .link {
+                font-size: $font-size-super-big;
+            }
+        }
+    }    
 }
 
 /* LADDER TEXT */
@@ -175,6 +220,8 @@ footer {
         align-self: center;
         width: 80%;
         height: 30vh;
+        margin-top: $padding-secondary;
+        margin-bottom: $padding-secondary;
 
         .infoWindow {
 
@@ -209,3 +256,32 @@ footer {
     }
 
 }
+
+/* SOCIAL NETWORKS */
+
+.socialNetworks {
+
+    display: flex;
+    justify-content: flex-end;  
+    margin-bottom: $padding-secondary;
+
+    &-container {
+    
+        display: flex;
+        margin-right: $padding-secondary;
+    
+        i {
+            color: $color-secondary;
+            font-size: $font-size-big;
+            margin-left: $padding-intermediate;
+            cursor: pointer;
+        }
+
+        .fa-linkedin:before {
+            content: "\f08c" !important;
+        }
+
+    }
+
+}
+

@@ -3,7 +3,7 @@ import { makeAutoObservable} from "mobx";
 export class AppStore {
 
     rootStore;
-    modalIsOpen = 0;
+    modalIsOpen = false;
 
     constructor(rootStore) {
         makeAutoObservable(this);
@@ -15,6 +15,7 @@ export class AppStore {
     }
 
     closeModal(){
+        document.body.style.overflow = 'unset';
         this.modalIsOpen = false;
     }
 
