@@ -1,7 +1,6 @@
 import React from 'react';
 import { observer } from "mobx-react";
 
-import GoogleMapsComponent from '../UI/GoogleMapsComponent';
 import SocialNetworksComponent from '../UI/SocialNetworksComponent';
 
 const ContactComponent = observer(() => {
@@ -25,10 +24,7 @@ const ContactComponent = observer(() => {
             </span>
             <span className="text"> 
                 Nuestra escuela se encuentra en el centro de Madrid, en el barrio de la Latina:<br></br>Calle Arganzuela Nº9<br></br>Local Derecho<br></br>28005, Madrid
-            </span>     
-            <div className="map">
-                <GoogleMapsComponent />
-            </div>     
+            </span>       
             <div className="socialNetworks">
                 <SocialNetworksComponent twitter={twitter} facebook={facebook} instagram={instagram} linkedin={linkedin}/>
             </div>

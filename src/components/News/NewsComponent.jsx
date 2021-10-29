@@ -1,17 +1,18 @@
 import React from 'react';
 import { observer } from "mobx-react";
 
+import { useAppStore } from "../../providers/StoreRootProvider";
 import LadderTextComponent from '../UI/LadderTextComponent';
 
-import news from '../../media/json/news.json'
+const NewsComponent = observer(() => {  
 
-const NewsComponent = observer(() => {
+    const appStore = useAppStore(); 
 
     return(
-        Object.values(news).length > 0 &&
+        Object.values(appStore.news).length > 0 &&
             <section className="section news" name="news">
                 <span className="title">Noticias</span>            
-                    {Object.values(news).map( (value, index) => (
+                    {Object.values(appStore.news).map( (value, index) => (
                         <div key={index} className="new">
                             <span className="text date">{value.date}</span>
                             <LadderTextComponent firstText={value.title} secondText={value.description} />
