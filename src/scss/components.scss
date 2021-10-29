@@ -22,6 +22,90 @@ body {
     cursor: pointer;
 }
 
+ul {
+
+    margin-top: 0;
+    margin-right: $padding-secondary;
+    list-style: square;
+    font-size: $font-size-secondary;
+
+    li:not(:last-child) { 
+        margin-bottom: $padding-primary;  
+    }
+
+}
+
+/* LADDER TEXT */
+
+.ladderText {
+
+    white-space: pre-line;
+    margin-bottom: $padding-secondary;
+
+    .first-text {
+        margin-left: $padding-primary;
+        margin-right: $padding-secondary;
+    }
+
+    .second-text {
+        margin-left: $padding-secondary;
+        margin-right: $padding-secondary;
+        margin-top: $padding-secondary;
+        font-size: $font-size-secondary;
+    }
+
+    .third-text {
+        margin-left: $padding-terciary;
+        margin-right: $padding-secondary;
+        margin-top: $padding-secondary;
+        font-size: $font-size-terciary;
+    }
+
+    .link {
+        margin-left: 0.25rem;
+    }
+
+}
+
+/* DOWNLOAD LINK */
+
+.downloadLink {
+    color: $color-secondary;
+    display: block;
+    text-align: right;
+    margin-bottom: $padding-secondary;
+    margin-right: $padding-primary;
+    cursor: pointer;
+}
+
+/* SOCIAL NETWORKS */
+
+.socialNetworks {
+
+    display: flex;
+    justify-content: flex-end;  
+    margin-bottom: $padding-secondary;
+
+    &-container {
+    
+        display: flex;
+        margin-right: $padding-secondary;
+    
+        i {
+            color: $color-secondary;
+            font-size: $font-size-big;
+            margin-left: $padding-intermediate;
+            cursor: pointer;
+        }
+
+        .fa-linkedin:before {
+            content: "\f08c" !important;
+        }
+
+    }
+
+}
+
 /* MAIN CONTENT */
 
 .main-content {
@@ -50,6 +134,7 @@ body {
     }
 
     .text {
+        display: block;
         white-space: pre-line;
         margin-bottom: $padding-secondary;
         margin-left: $padding-primary;
@@ -74,6 +159,7 @@ header {
     background-size: 200%;
     background-position: center center;
     background-repeat: no-repeat;
+    z-index: 1;
 
     .content {
 
@@ -183,126 +269,6 @@ footer {
     }    
 }
 
-/* LADDER TEXT */
-
-.ladderText {
-
-    white-space: pre-line;
-    margin-bottom: $padding-secondary;
-
-    .first-text {
-        margin-left: $padding-primary;
-        margin-right: $padding-secondary;
-    }
-
-    .second-text {
-        margin-left: $padding-secondary;
-        margin-right: $padding-secondary;
-        margin-top: $padding-secondary;
-        font-size: $font-size-secondary;
-    }
-
-    .third-text {
-        margin-left: $padding-terciary;
-        margin-right: $padding-secondary;
-        margin-top: $padding-secondary;
-        font-size: $font-size-terciary;
-    }
-
-    .link {
-        margin-left: 0.25rem;
-    }
-
-}
-
-/* DOWNLOAD LINK */
-
-.downloadLink {
-    color: $color-secondary;
-    display: block;
-    text-align: right;
-    margin-bottom: $padding-secondary;
-    margin-right: $padding-primary;
-    cursor: pointer;
-}
-
-/* CONTACT */
-
-.contact {
-
-    display: flex;
-    flex-direction: column;
-
-    .map {
-        
-        align-self: center;
-        width: 80%;
-        height: 30vh;
-        margin-top: $padding-secondary;
-        margin-bottom: $padding-secondary;
-
-        .infoWindow {
-
-            display: flex;    
-            flex-direction: column;        
-            color: $color-terciary;
-
-            &-title {
-                font-weight: bold;
-                margin-bottom: $padding-primary;
-            }
-
-            a {
-                color: $color-secondary;
-                font-weight: bold;
-                cursor: pointer;
-                margin-top: $padding-primary;
-            }
-
-        }
-
-        .markerLabel {
-            color: #1ea742 !important;
-            margin-top: 10px;
-            display: block;
-            width: 60px;
-            white-space: pre-wrap;
-            font-weight: bold;
-            font-size: 15px !important;
-        }
-
-    }
-
-}
-
-/* SOCIAL NETWORKS */
-
-.socialNetworks {
-
-    display: flex;
-    justify-content: flex-end;  
-    margin-bottom: $padding-secondary;
-
-    &-container {
-    
-        display: flex;
-        margin-right: $padding-secondary;
-    
-        i {
-            color: $color-secondary;
-            font-size: $font-size-big;
-            margin-left: $padding-intermediate;
-            cursor: pointer;
-        }
-
-        .fa-linkedin:before {
-            content: "\f08c" !important;
-        }
-
-    }
-
-}
-
 /* TEACHERS */
 
 .teacherDetails {
@@ -359,18 +325,71 @@ footer {
 /* ADMISSION */
 
 .admission {
+    display: flex;
+    flex-direction: column;   
+}
+
+/* NEWS */
+
+.news {
+
+    .new {
+        
+        .date {
+            font-size: $font-size-secondary;
+        }
+
+        .link {
+            margin-left: $padding-primary;
+        }
+
+    }
+
+}
+
+/* CONTACT */
+
+.contact {
 
     display: flex;
     flex-direction: column;
 
-    ul {
+    .map {
+        
+        align-self: center;
+        width: 80%;
+        height: 30vh;
+        margin-top: $padding-secondary;
+        margin-bottom: $padding-secondary;
 
-        margin-top: 0;
-        list-style: none;
-        font-size: $font-size-secondary;
+        .infoWindow {
 
-        li:not(:last-child) { 
-            margin-bottom: $padding-primary;  
+            display: flex;    
+            flex-direction: column;        
+            color: $color-terciary;
+
+            &-title {
+                font-weight: bold;
+                margin-bottom: $padding-primary;
+            }
+
+            a {
+                color: $color-secondary;
+                font-weight: bold;
+                cursor: pointer;
+                margin-top: $padding-primary;
+            }
+
+        }
+
+        .markerLabel {
+            color: #1ea742 !important;
+            margin-top: 10px;
+            display: block;
+            width: 60px;
+            white-space: pre-wrap;
+            font-weight: bold;
+            font-size: 15px !important;
         }
 
     }

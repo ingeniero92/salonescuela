@@ -21,7 +21,7 @@ const ContactComponent = observer(() => {
                 Solicita información sobre nuestros cursos, o envíanos cualquier comentario referente a nuestro curso.
             </span>
             <span className="text"> 
-                Puedes escribirnos a cualquier hora del día (<a href="mailto:se@salonescuela.com">se@salonescuela.com</a>) pero también puedes escribirnos un texto vía Whatsapp: <i class="fab fa-whatsapp"></i> +34 615 972 686
+                Puedes escribirnos a cualquier hora del día (<a href="mailto:se@salonescuela.com">se@salonescuela.com</a>) pero también puedes escribirnos un texto vía Whatsapp: <i className="fab fa-whatsapp"></i> +34 615 972 686
             </span>
             <span className="text"> 
                 Nuestra escuela se encuentra en el centro de Madrid, en el barrio de la Latina:<br></br>Calle Arganzuela Nº9<br></br>Local Derecho<br></br>28005, Madrid

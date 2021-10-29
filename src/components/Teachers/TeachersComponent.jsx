@@ -8,12 +8,12 @@ import teachers from '../../media/json/teachers.json'
 const TeachersComponent = observer(() => {
 
     return(
-        <div className="section teachers" name="teachers">
+        <section className="section teachers" name="teachers">
             <span className="title">Tutores 2022</span>            
                 {Object.values(teachers).map( (value, index) => (
                     <TeacherDetailsComponent key={index} teacher={value}/>
                 ))}            
-        </div>
+        </section>
     );
     
 });
