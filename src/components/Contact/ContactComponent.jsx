@@ -1,7 +1,6 @@
 import React from 'react';
 import { observer } from "mobx-react";
 
-import LadderTextComponent from '../UI/LadderTextComponent';
 import GoogleMapsComponent from '../UI/GoogleMapsComponent';
 import SocialNetworksComponent from '../UI/SocialNetworksComponent';
 
@@ -14,19 +13,19 @@ const ContactComponent = observer(() => {
 
     return(
         <section className="section contact" name="contact">
-            <span className="title">CONTACTO</span>
+            <span className="title">Contacto</span>
             <div className="socialNetworks">
                 <SocialNetworksComponent twitter={twitter} facebook={facebook} instagram={instagram} linkedin={linkedin}/>
             </div>
-            <LadderTextComponent 
-                firstText  = {"Solicita información sobre nuestros cursos, o envíanos cualquier comentario referente a nuestro curso."}
-            />
-            <LadderTextComponent 
-                firstText  = {"Puedes escribirnos a cualquier hora del día (se@salonescuela.com) pero también puedes escribirnos un texto vía Whatsapp: +34 615 972 686"}
-            />
-            <LadderTextComponent 
-                firstText  = {"Nuestra escuela se encuentra en el centro de Madrid, en el barrio de la Latina:\nCalle Arganzuela Nº9\nLocal Derecho\n28005, Madrid\n"}
-            />     
+            <span className="text"> 
+                Solicita información sobre nuestros cursos, o envíanos cualquier comentario referente a nuestro curso.
+            </span>
+            <span className="text"> 
+                Puedes escribirnos a cualquier hora del día (<a href="mailto:se@salonescuela.com">se@salonescuela.com</a>) pero también puedes escribirnos un texto vía Whatsapp: <i class="fab fa-whatsapp"></i> +34 615 972 686
+            </span>
+            <span className="text"> 
+                Nuestra escuela se encuentra en el centro de Madrid, en el barrio de la Latina:<br></br>Calle Arganzuela Nº9<br></br>Local Derecho<br></br>28005, Madrid
+            </span>     
             <div className="map">
                 <GoogleMapsComponent />
             </div>     

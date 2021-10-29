@@ -11,7 +11,7 @@ const ProgramComponent = observer(() => {
 
     return(
         <section className="section program" name="program">
-            <span className="title">PROGRAMA</span>
+            <span className="title">Programa Laboratorio de experimentación y producción artística</span>
             <DownloadLinkComponent 
                 text = {downloadText}
                 url  = {downloadURL}

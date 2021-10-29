@@ -5,7 +5,7 @@ const ContactComponent = observer(() => {
 
     return(
         <div className="scholarship">
-            <span>Beca</span>
+            <span></span>
         </div>
     );
     
