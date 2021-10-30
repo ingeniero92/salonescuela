@@ -6,6 +6,7 @@ export class AppStore {
     modalIsOpen = false;
     news = {};
     teachers = {};
+    headerTitle = "SALØNESCUELA";
     
     /* INIT */
 
@@ -43,5 +44,10 @@ export class AppStore {
         document.body.style.overflow = 'unset';
         this.modalIsOpen = false;
     }      
+
+    /* HEADER TITLE */
+    setHeaderTitle(title){
+        this.headerTitle = title;
+    }
 
 }

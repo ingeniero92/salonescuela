@@ -15,12 +15,15 @@ class Header extends BaseComponent {
 
     render(){
         return(
-            <header>
-                <div className="content">
-                    <span onClick={this.scrollToTop}>SALØNESCUELA</span>
-                    <i onClick={ () => this.store.appStore.toggleModal()} className="fa fa-bars"></i>
-                </div>
-            </header>
+            <React.Fragment>
+                <header>
+                    <div className="content">
+                        <span onClick={this.scrollToTop}>{this.store.appStore.headerTitle}</span>
+                        <i onClick={ () => this.store.appStore.toggleModal()} className="fa fa-bars"></i>
+                    </div>
+                </header>
+                <div className="header-offset"></div>
+            </React.Fragment>
         );
     }
 
