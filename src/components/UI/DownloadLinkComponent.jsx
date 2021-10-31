@@ -21,7 +21,7 @@ const DownloadLinkComponent = observer((props) => {
     }
 
     return(
-        <span className="downloadLink" onClick={downloadFile}>{props.text}</span>
+        <span className="downloadLink link" onClick={downloadFile}>{props.text}</span>
     );
     
 });

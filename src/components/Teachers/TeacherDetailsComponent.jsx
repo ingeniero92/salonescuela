@@ -54,7 +54,7 @@ const TeacherDetailsComponent = (props) => {
                 </div>
             }
 
-            <span className="url">{url}</span>
+            <span className="url link">{url}</span>
 
         </div>
     );

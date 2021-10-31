@@ -23,7 +23,7 @@ const ContactComponent = observer(() => {
                 secondText={"Cada participante debe crear un archivo comprimido en formato .zip o .rar que no supere los 15 Mb, nombrado por su nombre y apellidos. El archivo se enviará a través de email como se detalla a continuación."}
             />
             <span className="text"> 
-                Cada participante debe enviar a través del email <a href="mailto:se@salonescuela.com">se@salonescuela.com</a>:
+                Cada participante debe enviar a través del email <a className="link" href="mailto:se@salonescuela.com">se@salonescuela.com</a>:
             </span>
             <ul>
                 <li>Nombre y apellidos</li>

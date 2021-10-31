@@ -14,7 +14,7 @@ const AdmissionComponent = observer(() => {
                 El periodo de admisión para el Curso 2022 se iniciará el {startDate}.
             </span>
             <span className="text"> 
-                La inscripción solo puedes realizarla a través del email <a href="mailto:se@salonescuela.com">se@salonescuela.com</a>.<br></br>
+                La inscripción solo puedes realizarla a través del email <a className="link" href="mailto:se@salonescuela.com">se@salonescuela.com</a>.<br></br>
                 Las y los candidatos deberán incorporar a su solicitud los siguientes datos y documentos adjuntos:
             </span>
             <ul>
