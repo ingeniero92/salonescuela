@@ -11,7 +11,7 @@ const ContactComponent = observer(() => {
     const linkedin  = ""; // TODO
 
     return(
-        <section className="section contact" name="contact">
+        <section className="section contact" id="contact">
             <span className="title">Contacto</span>
             <div className="socialNetworks">
                 <SocialNetworksComponent twitter={twitter} facebook={facebook} instagram={instagram} linkedin={linkedin}/>

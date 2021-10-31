@@ -10,7 +10,7 @@ const ProgramComponent = observer(() => {
     const downloadURL = "/pdf/Programa_2020.pdf"; // TODO
 
     return(
-        <section className="section program" name="program">
+        <section className="section program" id="program">
             <span className="title">Programa Laboratorio de experimentación y producción artística</span>
             <DownloadLinkComponent 
                 text = {downloadText}

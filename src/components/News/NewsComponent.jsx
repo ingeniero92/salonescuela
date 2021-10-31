@@ -10,7 +10,7 @@ const NewsComponent = observer(() => {
 
     return(
         Object.values(appStore.news).length > 0 &&
-            <section className="section news" name="news">
+            <section className="section news" id="news">
                 <span className="title">Noticias</span>            
                     {Object.values(appStore.news).map( (value, index) => (
                         <div key={index} className="new">

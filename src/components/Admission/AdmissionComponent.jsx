@@ -8,7 +8,7 @@ const AdmissionComponent = observer(() => {
     const startDate = "xxxxxx"; // TODO
 
     return(
-        <section className="section admission" name="admission">
+        <section className="section admission" id="admission">
             <span className="title">Admisión</span>
             <span className="text"> 
                 El periodo de admisión para el Curso 2022 se iniciará el {startDate}.

@@ -6,7 +6,7 @@ import LadderTextComponent from '../UI/LadderTextComponent';
 const SchoolComponent = observer(() => {
 
     return(
-        <section className="section school" name="school">
+        <section className="section school" id="school">
             <span className="title">Escuela</span>
             <LadderTextComponent 
                 firstText  = {"Salønescuela es una propuesta pedagógica de creación e investigación sobre arte contemporáneo para confrontar/posicionar al artista con su obra y consigo mismo."}

@@ -9,7 +9,7 @@ const TeachersComponent = observer(() => {
     const appStore = useAppStore(); 
 
     return(
-        <section className="section teachers" name="teachers">
+        <section className="section teachers" id="teachers">
             <span className="title">Tutores 2022</span>            
                 {Object.values(appStore.teachers).map( (value, index) => (
                     <TeacherDetailsComponent key={index} teacher={value}/>
