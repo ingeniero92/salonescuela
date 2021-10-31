@@ -159,6 +159,7 @@ ul {
 
 .section {
     
+    position: relative; 
     max-width: $width-page;
     margin: 0 auto;
     padding-bottom: $padding-section;
@@ -251,21 +252,23 @@ header {
             height: $header-height;
 
             a {
+                opacity: 0;
                 position: absolute;
-                top: -200px;
-                transition: all 1s linear;    
-                -webkit-transition: all 1s linear;
-                -moz-transition: all 1s linear;
-                -o-transition: all 1s linear;        
+                top: $padding-big;
+                transition: opacity 0.25s linear, top 1s linear;    
+                -webkit-transition: opacity 0.25s linear, top 1s linear;
+                -moz-transition: opacity 0.25s linear, top 1s linear;
+                -o-transition: opacity 0.25s linear, top 1s linear;        
             }            
 
             a.active {
+                opacity: 1;
                 top: $padding-intermediate;
                 color: $color-primary;
-                transition: all 0.5s linear;    
-                -webkit-transition: all 0.5s linear;
-                -moz-transition: all 0.5s linear;
-                -o-transition: all 0.5s linear;  
+                transition: opacity 0.5s linear, top 0.5s linear;    
+                -webkit-transition: opacity 0.5s linear, top 0.5s linear;
+                -moz-transition: opacity 0.5s linear, top 0.5s linear;
+                -o-transition: opacity 0.5s linear, top 0.5s linear;  
             }
 
         }
