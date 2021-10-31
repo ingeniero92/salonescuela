@@ -2,6 +2,7 @@
 
 html {
     font-size: 24px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
     background-size: 2500%;
     background-position: center center;
     background-repeat: no-repeat;
+    font-size: $font-size-primary;
 }
 
 @media (min-width: 400px) {
@@ -162,7 +164,7 @@ ul {
     padding-bottom: $padding-section;
 
     .title {
-        display: block;
+        display: none;
         color: $color-terciary;
         margin-left: $padding-primary;
         margin-right: $padding-secondary;
@@ -205,10 +207,10 @@ ul {
 header {
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     position: fixed;
     width: 100%;
-    height: 3rem;
     background-color: $menu-color;
     background-image: url("/media/img/fondo.png");
     background-size: 200%;
@@ -220,31 +222,58 @@ header {
 
         display: flex;
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
         z-index: 10;
         max-width: $width-page;
         width: 100%;
+        height: auto;
 
         span {
             cursor: pointer;
             padding-left: $padding-primary;
+            color: $color-primary;
         }
     
-        .fa {
+        i {
             cursor: pointer;
             padding-right: $padding-secondary;
+            padding-top: $padding-intermediate;
             color: $color-secondary;   
+            font-size: $font-size-primary;
         }
 
-    }    
+        .links {
+
+            display: flex;
+            flex-direction: column;
+            padding: $padding-intermediate;
+            line-height: $font-size-big;
+            height: $header-height;
+
+            a {
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.2s linear;    
+                -webkit-transition: all 0.2s linear;
+                -moz-transition: all 0.2s linear;
+                -o-transition: all 0.2s linear;        
+            }            
+
+            a.active {
+                color: $color-primary;
+                visibility: visible;
+                opacity: 1;   
+            }
+
+        }
+
+    }           
 
 }
 
-.main-content::before {
-    display: inline-block;
-    content: '';
-    height: 4rem;
+.section:first-of-type {
+    padding-top: $padding-terciary;
 }
 
 /* FOOTER */
@@ -313,7 +342,6 @@ footer {
             right: 1rem;
             color: $color-secondary;
             cursor: pointer;   
-            font-size: $font-size-big;
         }
     
     }
@@ -344,7 +372,6 @@ footer {
         flex-wrap: wrap;
 
         .teacherName {
-            font-size: $font-size-primary;
             color: $color-secondary;           
             margin-right: $padding-primary;
         }        

@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 
 import { useAppStore } from "../../providers/StoreRootProvider";
 
-const MenuComponent = observer(() => {
+const MenuModalComponent = observer(() => {
 
     const appStore = useAppStore();
 
@@ -42,4 +42,4 @@ const MenuComponent = observer(() => {
 
 });
 
-export default MenuComponent;
+export default MenuModalComponent;
