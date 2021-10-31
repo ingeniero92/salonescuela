@@ -252,18 +252,20 @@ header {
 
             a {
                 position: absolute;
-                visibility: hidden;
-                opacity: 0;
-                transition: all 0.2s linear;    
-                -webkit-transition: all 0.2s linear;
-                -moz-transition: all 0.2s linear;
-                -o-transition: all 0.2s linear;        
+                top: -200px;
+                transition: all 1s linear;    
+                -webkit-transition: all 1s linear;
+                -moz-transition: all 1s linear;
+                -o-transition: all 1s linear;        
             }            
 
             a.active {
+                top: $padding-intermediate;
                 color: $color-primary;
-                visibility: visible;
-                opacity: 1;   
+                transition: all 0.5s linear;    
+                -webkit-transition: all 0.5s linear;
+                -moz-transition: all 0.5s linear;
+                -o-transition: all 0.5s linear;  
             }
 
         }
