@@ -22,7 +22,6 @@ class Header extends BaseComponent {
                         <i onClick={ () => this.store.appStore.toggleModal()} className="fa fa-bars"></i>
                     </div>
                 </header>
-                <div className="header-offset"></div>
             </React.Fragment>
         );
     }

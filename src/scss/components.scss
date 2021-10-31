@@ -10,32 +10,32 @@ body {
     color: $color-primary;
     background-color: $background-color;
     background-image: url("/media/img/fondo.png");
-    background-size: 2200%;
+    background-size: 2500%;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 @media (min-width: 400px) {
     body {
-        background-size: 1500%;
+        background-size: 1700%;
     }   
 }
 
 @media (min-width: 600px) {
     body {
-        background-size: 900%;
+        background-size: 1100%;
     }   
 }
 
 @media (min-width: 800px) {
     body {
-        background-size: 500%;
+        background-size: 800%;
     }   
 }
 
 @media (min-width: 1000px) {
     body {
-        background-size: 400%;
+        background-size: 600%;
     }   
 }
 
@@ -73,7 +73,7 @@ ul {
 
     .second-text {
         margin-left: $padding-secondary;
-        margin-right: $padding-secondary;
+        margin-right: $padding-primary;
         margin-top: $padding-secondary;
         font-size: $font-size-secondary;
     }
@@ -87,6 +87,19 @@ ul {
 
     .link {
         margin-left: 0.25rem;
+    }
+
+    .img {
+
+        margin-left: $padding-secondary;
+        margin-right: $padding-primary;
+        margin-top: $padding-intermediate;
+        width: calc(100%-$padding-primary-$padding-secondary);
+
+        img {
+            width: 100%;
+        }
+
     }
 
 }
@@ -170,6 +183,21 @@ ul {
         text-decoration: none;
     }
 
+    .images {
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+
+        img {
+            max-width: 300px;
+            height: auto;
+            padding: $padding-primary;
+        }
+
+    }
+
 }
 
 /* HEADER */
@@ -213,7 +241,9 @@ header {
 
 }
 
-.header-offset {
+.main-content::before {
+    display: inline-block;
+    content: '';
     height: 4rem;
 }
 
@@ -304,8 +334,8 @@ footer {
 .teacherDetails {
 
     margin-bottom: $padding-secondary;
-    margin-left: $padding-primary;
-    margin-right: $padding-secondary;   
+    margin-left: $padding-secondary;
+    margin-right: $padding-primary;   
 
     .nameTitle {
 
@@ -338,8 +368,7 @@ footer {
 
     .subdescription {
         font-size: $font-size-secondary;
-        margin-top: $padding-secondary;
-        margin-left: $padding-secondary;
+        margin-top: $padding-intermediate;
     }
 
     .url {
@@ -348,6 +377,17 @@ footer {
         cursor: pointer;
         color: $color-secondary;
         margin-top: $padding-intermediate;
+    }
+
+    .img {
+
+        margin-top: $padding-intermediate;
+        width: calc(100%-$padding-primary-$padding-secondary);
+
+        img {
+            width: 100%;
+        }
+
     }
 
 }
@@ -366,7 +406,8 @@ footer {
     .new {
         
         .date {
-            font-size: $font-size-secondary;
+            font-size: $font-size-terciary;
+            margin-bottom: 0;
         }
 
         .link {

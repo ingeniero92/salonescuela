@@ -7,6 +7,7 @@ const TeacherDetailsComponent = (props) => {
     const description       = props.teacher.description;
     const subdescription    = props.teacher.subdescription;
     const url               = props.teacher.url;
+    const img               = props.teacher.img;
 
     const textExpanded = "Leer menos";
     const textNoExpanded = "Leer más";
@@ -38,6 +39,12 @@ const TeacherDetailsComponent = (props) => {
                     {subdescription !== undefined &&
                         <span className="link" onClick={ () => changeText()}>{secondTextLink}</span>
                     }
+                </div>
+            }
+
+            {img !== undefined &&
+                <div className="img">
+                    <img src={"/img/teachers/" + img} alt={name} />
                 </div>
             }
 

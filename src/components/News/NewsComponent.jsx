@@ -15,7 +15,7 @@ const NewsComponent = observer(() => {
                     {Object.values(appStore.news).map( (value, index) => (
                         <div key={index} className="new">
                             <span className="text date">{value.date}</span>
-                            <LadderTextComponent firstText={value.title} secondText={value.description} />
+                            <LadderTextComponent firstText={value.title} secondText={value.description} img={value.img !== undefined ? "img/news/" + value.img : undefined}/>
                             { value.url !== undefined && value.url.trim() !== "" && <a href={value.url} target="blank" className="link">{value.link}</a> }
                         </div>
                     ))}            

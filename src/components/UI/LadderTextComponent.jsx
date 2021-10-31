@@ -44,6 +44,12 @@ const LadderTextComponent = observer((props) => {
                 </div>
             }
 
+            {props.img !== undefined &&
+                <div className="img">
+                    <img src={props.img} alt={props.img} />
+                </div>
+            }
+
             {secondText && props.secondText !== undefined &&
                 <div className="second-text">
                     <span>{props.secondText}</span>
