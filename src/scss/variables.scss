@@ -3,6 +3,7 @@
 $font-stack: "GTAmerica", "Roboto", monospace, sans-serif;
 
 $width-page: 900px;
+$header-height: 1.5rem;
 
 $color-primary: white;
 $color-secondary: rgb(0,255,153);
@@ -11,17 +12,13 @@ $color-terciary: rgb(51,51,51);
 $menu-color: rgb(51,51,51);
 $background-color: rgb(133,84,84);
 $pixel-color: #666666;
-$header-height: 1.5rem;
 
 $padding-primary: 0.25rem;
-$padding-secondary: 1rem;
-$padding-terciary: 4rem;
+$padding-secondary: 0.5rem;
+$padding-terciary: 1rem;
 $padding-section: 10rem;
-$padding-intermediate: 0.5rem;
-$padding-big: 2rem;
 
 $font-size-primary: 1.25rem;
 $font-size-secondary: 1rem;
 $font-size-terciary: 0.75rem;
 $font-size-big: 1.5rem;
-$font-size-super-big: 2rem;

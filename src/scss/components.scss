@@ -11,7 +11,7 @@ body {
     color: $color-primary;
     background-color: $background-color;
     background-image: url("/media/img/fondo.png");
-    background-size: 2500%;
+    background-size: 3000%;
     background-position: center center;
     background-repeat: no-repeat;
     font-size: $font-size-primary;
@@ -19,25 +19,25 @@ body {
 
 @media (min-width: 400px) {
     body {
-        background-size: 1700%;
+        background-size: 2200%;
     }   
 }
 
 @media (min-width: 600px) {
     body {
-        background-size: 1100%;
+        background-size: 1400%;
     }   
 }
 
 @media (min-width: 800px) {
     body {
-        background-size: 800%;
+        background-size: 900%;
     }   
 }
 
 @media (min-width: 1000px) {
     body {
-        background-size: 600%;
+        background-size: 800%;
     }   
 }
 
@@ -52,7 +52,7 @@ body {
 ul {
 
     margin-top: 0;
-    margin-right: $padding-secondary;
+    margin-right: $padding-terciary;
     list-style: square;
     font-size: $font-size-secondary;
 
@@ -67,36 +67,37 @@ ul {
 .ladderText {
 
     white-space: pre-line;
-    margin-bottom: $padding-secondary;
+    margin-bottom: $padding-terciary;
 
     .first-text {
         margin-left: $padding-primary;
-        margin-right: $padding-secondary;
+        margin-right: $padding-terciary;
     }
 
     .second-text {
-        margin-left: $padding-secondary;
+        margin-left: $padding-terciary;
         margin-right: $padding-primary;
-        margin-top: $padding-secondary;
+        margin-top: $padding-terciary;
         font-size: $font-size-secondary;
     }
 
     .third-text {
         margin-left: $padding-terciary;
-        margin-right: $padding-secondary;
-        margin-top: $padding-secondary;
+        margin-right: $padding-terciary;
+        margin-top: $padding-terciary;
         font-size: $font-size-terciary;
     }
 
     .link {
         margin-left: 0.25rem;
+        word-break: keep-all;
     }
 
     .img {
 
-        margin-left: $padding-secondary;
+        margin-left: $padding-terciary;
         margin-right: $padding-primary;
-        margin-top: $padding-intermediate;
+        margin-top: $padding-secondary;
         width: calc(100% - 1.25rem);
 
         img {
@@ -114,9 +115,10 @@ ul {
     color: $color-secondary;
     display: block;
     text-align: right;
-    margin-bottom: $padding-secondary;
+    margin-bottom: $padding-terciary;
     margin-right: $padding-primary;
     cursor: pointer;
+    font-size: $font-size-secondary;
 }
 
 /* SOCIAL NETWORKS */
@@ -125,17 +127,17 @@ ul {
 
     display: flex;
     justify-content: flex-end;  
-    margin-bottom: $padding-secondary;
+    margin-bottom: $padding-terciary;
 
     &-container {
     
         display: flex;
-        margin-right: $padding-secondary;
+        margin-right: $padding-terciary;
     
         i {
             color: $color-secondary;
             font-size: $font-size-big;
-            margin-left: $padding-intermediate;
+            margin-left: $padding-secondary;
             cursor: pointer;
         }
 
@@ -170,17 +172,17 @@ ul {
         display: none;
         color: $color-terciary;
         margin-left: $padding-primary;
-        margin-right: $padding-secondary;
-        margin-bottom: $padding-intermediate;
+        margin-right: $padding-terciary;
+        margin-bottom: $padding-secondary;
         font-weight: bold;
     }
 
     .text {
         display: block;
         white-space: pre-line;
-        margin-bottom: $padding-secondary;
+        margin-bottom: $padding-terciary;
         margin-left: $padding-primary;
-        margin-right: $padding-secondary;
+        margin-right: $padding-terciary;
     }   
 
     a {
@@ -206,7 +208,7 @@ ul {
 }
 
 .section:first-of-type {
-    padding-top: $padding-terciary;
+    padding-top: $header-height*2; // Twice the header in order to show all in init
 }
 
 /* HEADER */
@@ -243,25 +245,48 @@ header {
     
         i {
             cursor: pointer;
-            padding-right: $padding-secondary;
-            padding-top: $padding-intermediate;
+            padding-right: $padding-primary;
+            padding-top: $padding-primary;
             color: $color-secondary;   
             font-size: $font-size-primary;
+            position: absolute;
+            top: $padding-secondary;
+            right: $padding-secondary;
+            z-index: 5;
+        }
+
+        i.visible {
+            opacity: 1;
+            transform: rotate(180deg);
+            transition: all 0.25s linear;
+        }
+
+        i.no-visible {
+            opacity: 0;
+            transform: rotate(90deg);
+            transition: all 0.25s linear;
+        }
+
+        .fa-times {
+            font-size: $font-size-big;
+            top: $padding-secondary;
         }
 
         .links {
 
             display: flex;
             flex-direction: column;
-            padding: $padding-intermediate;
+            padding: $padding-secondary;
             line-height: $font-size-big;
             height: $header-height;
+            position: absolute;
+            width: 100%;       
+            z-index: 3; 
 
             a {
                 pointer-events: none;
                 opacity: 0;
                 position: absolute;
-                top: $padding-big;
                 transition: opacity 0.25s linear, top 0.25s linear;    
                 -webkit-transition: opacity 0.25s linear, top 0.25s linear;
                 -moz-transition: opacity 0.25s linear, top 0.25s linear;
@@ -272,13 +297,54 @@ header {
             a.active {
                 pointer-events: all;
                 opacity: 1;
-                top: $padding-intermediate;
+                top: $padding-secondary;
                 color: $color-primary;
                 transition: opacity 0.25s linear, top 0.25s linear;    
                 -webkit-transition: opacity 0.25s linear, top 0.25s linear;
                 -moz-transition: opacity 0.25s linear, top 0.25s linear;
                 -o-transition: opacity 0.25s linear, top 0.25s linear;  
                 z-index: 2;
+            }
+
+        }
+
+        .links.open {
+            opacity: 0;
+            transition: opacity 0.25s linear;
+        }
+
+        .links.closed {
+            opacity: 1;
+            transition: opacity 0.15s linear;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            padding: $padding-secondary;
+            transition: max-height 0.25s linear;  
+            z-index: 4;
+        }
+
+        .menu.closed {
+           
+            max-height: $header-height;
+
+            a {
+                opacity: 0;
+                transition: opacity 0.15s linear;
+            }
+
+        }
+
+        .menu.open {
+
+            height: auto;
+            max-height: 280px;
+
+            a {
+                opacity: 1;
+                transition: opacity 0.5s linear;
             }
 
         }
@@ -362,7 +428,7 @@ footer {
     .menu-modal{
         .menu {
             a, span, .link {
-                font-size: $font-size-super-big;
+                font-size: $font-size-big;
             }
         }
     }    
@@ -380,8 +446,8 @@ footer {
 
     .teacherDetails {
 
-        margin-bottom: $padding-secondary;
-        margin-left: $padding-secondary;
+        margin-bottom: $padding-terciary;
+        margin-left: $padding-terciary;
         margin-right: $padding-primary;   
     
         .nameTitle {
@@ -414,7 +480,7 @@ footer {
     
         .subdescription {
             font-size: $font-size-secondary;
-            margin-top: $padding-intermediate;
+            margin-top: $padding-secondary;
         }
     
         .url {
@@ -422,12 +488,12 @@ footer {
             font-size: $font-size-secondary;
             cursor: pointer;
             color: $color-secondary;
-            margin-top: $padding-intermediate;
+            margin-top: $padding-secondary;
         }
     
         .img {
     
-            margin-top: $padding-intermediate;
+            margin-top: $padding-secondary;
             width: 100%;
     
             img {
@@ -484,8 +550,8 @@ footer {
         align-self: center;
         width: 80%;
         height: 30vh;
-        margin-top: $padding-secondary;
-        margin-bottom: $padding-secondary;
+        margin-top: $padding-terciary;
+        margin-bottom: $padding-terciary;
 
         .infoWindow {
 
