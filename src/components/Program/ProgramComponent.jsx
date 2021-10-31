@@ -6,8 +6,8 @@ import DownloadLinkComponent from '../UI/DownloadLinkComponent';
 
 const ProgramComponent = observer(() => {
 
-    const downloadText = "Descarga Programa_2020.pdf"; // TODO
-    const downloadURL = "/pdf/Programa_2020.pdf"; // TODO
+    const downloadText = "Descarga Programa_2020.pdf";
+    const downloadURL = "/pdf/Programa_2020.pdf";
 
     return(
         <section className="section program" id="program">

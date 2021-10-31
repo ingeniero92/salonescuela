@@ -4,9 +4,9 @@ import LadderTextComponent from '../UI/LadderTextComponent';
 
 const ContactComponent = observer(() => {
 
-    const startDate  = "xxxxxx";
-    const endDate    = "xxxxxx";
-    const prizeDate  = "xxxxxx";
+    const startDate  = "xxxxxx"; // TODO
+    const endDate    = "xxxxxx"; // TODO
+    const prizeDate  = "xxxxxx"; // TODO
 
     return(
         <section className="section scholarship" name="scholarship">
