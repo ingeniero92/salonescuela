@@ -46,7 +46,7 @@ body {
 .link {
     color: $color-secondary;
     cursor: pointer;
-    word-break: break-all;
+    word-break: keep-all;
 }
 
 ul {
@@ -72,6 +72,7 @@ ul {
     .first-text {
         margin-left: $padding-primary;
         margin-right: $padding-secondary;
+        line-height: $line-height-primary;
     }
 
     .second-text {
@@ -115,7 +116,7 @@ ul {
     color: $color-secondary;
     display: block;
     text-align: right;
-    margin-bottom: $padding-primary;
+    margin-bottom: $padding-secondary;
     margin-right: $padding-primary;
     cursor: pointer;
     font-size: $font-size-terciary;
@@ -179,6 +180,7 @@ ul {
         margin-bottom: $padding-secondary;
         margin-left: $padding-primary;
         margin-right: $padding-terciary;
+        line-height: $line-height-primary;
     }   
 
     a {
@@ -244,7 +246,7 @@ header {
             color: $color-secondary;   
             font-size: $font-size-primary;
             position: absolute;
-            top: $header-height/2;
+            top: $padding-secondary;
             right: $padding-secondary;
             z-index: 5;
         }
@@ -253,6 +255,9 @@ header {
             opacity: 1;
             transform: rotate(180deg);
             transition: all 0.25s linear;
+            -webkit-transition: all 0.25s linear;
+            -moz-transition: all 0.25s linear;
+            -o-transition: all 0.25s linear;
         }
 
         i.no-visible {
@@ -260,11 +265,14 @@ header {
             opacity: 0;
             transform: rotate(90deg);
             transition: all 0.25s linear;
+            -webkit-transition: all 0.25s linear;
+            -moz-transition: all 0.25s linear;
+            -o-transition: all 0.25s linear;
         }
 
         .fa-times {
             font-size: $font-size-fa;
-            top: $padding-primary;
+            top: $header-height/2;
         }
 
         .links {
@@ -283,6 +291,7 @@ header {
                 pointer-events: none;
                 opacity: 0;
                 position: absolute;
+                top: $padding-secondary;
                 transition: opacity 0.25s linear, top 0.25s linear;    
                 -webkit-transition: opacity 0.25s linear, top 0.25s linear;
                 -moz-transition: opacity 0.25s linear, top 0.25s linear;
@@ -293,7 +302,7 @@ header {
             a.active {
                 pointer-events: all;
                 opacity: 1;
-                top: $padding-primary;
+                top: $padding-secondary;
                 color: $color-primary;
                 transition: opacity 0.25s linear, top 0.25s linear;    
                 -webkit-transition: opacity 0.25s linear, top 0.25s linear;
@@ -307,18 +316,29 @@ header {
         .links.open {
             opacity: 0;
             transition: opacity 0.25s linear;
+            -webkit-transition: opacity 0.25s linear;
+            -moz-transition: opacity 0.25s linear;
+            -o-transition: opacity 0.25s linear;         
+
         }
 
         .links.closed {
             opacity: 1;
             transition: opacity 0.15s linear;
+            -webkit-transition: opacity 0.15s linear;
+            -moz-transition: opacity 0.15s linear;
+            -o-transition: opacity 0.15s linear;
         }
 
         .menu {
             display: flex;
             flex-direction: column;
             padding: $padding-primary;
+            padding-top: $padding-secondary;
             transition: max-height 0.25s linear;  
+            -webkit-transition: max-height 0.25s linear;  
+            -moz-transition: max-height 0.25s linear;  
+            -o-transition: max-height 0.25s linear;  
             z-index: 4;
             letter-spacing: 0.075rem;
         }
@@ -331,6 +351,9 @@ header {
             a {
                 opacity: 0;
                 transition: opacity 0.15s linear;
+                -webkit-transition: opacity 0.15s linear;
+                -moz-transition: opacity 0.15s linear;
+                -o-transition: opacity 0.15s linear;
             }
 
         }
@@ -342,7 +365,6 @@ header {
 
             a {
                 opacity: 1;
-                // transition: opacity 0.5s linear;
             }
 
         }
@@ -366,6 +388,9 @@ footer {
 .ReactModal__Overlay {
     opacity: 0;
     transition: opacity 500ms ease-in;
+    -webkit-transition: opacity 500ms ease-in;
+    -moz-transition: opacity 500ms ease-in;
+    -o-transition: opacity 500ms ease-in;
 }
 
 .ReactModal__Overlay--after-open{
