@@ -193,7 +193,6 @@ ul {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        width: 100%;
 
         img {
             max-width: 300px;
@@ -201,8 +200,23 @@ ul {
             padding: $padding-primary;
         }
 
-    }
+    }   
 
+}
+
+@media (max-width: 400px) {
+    .section {
+        .images {
+            padding-left: $padding-primary;
+            padding-right: $padding-secondary;
+            img {
+                width: 100%;
+                max-width: 400px;
+                padding: 0;
+                margin-bottom: $padding-secondary;
+            }
+        }
+    }
 }
 
 .section:first-of-type {
