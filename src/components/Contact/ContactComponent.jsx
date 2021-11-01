@@ -1,14 +1,18 @@
 import React from 'react';
 import { observer } from "mobx-react";
 
+import { useAppStore } from '../../providers/StoreRootProvider';
 import SocialNetworksComponent from '../UI/SocialNetworksComponent';
 
 const ContactComponent = observer(() => {
 
-    const twitter   = ""; // TODO
-    const facebook  = ""; // TODO
-    const instagram = ""; // TODO
-    const linkedin  = ""; // TODO
+    const appStore = useAppStore();
+
+    const twitter   = appStore.twitterURL;
+    const facebook  = appStore.facebookURL;
+    const instagram = appStore.instagramURL;
+    const linkedin  = appStore.linkedinURL;
+    const email     = appStore.email;
 
     return(
         <section className="section contact" id="contact">
@@ -20,7 +24,7 @@ const ContactComponent = observer(() => {
                 Solicita información sobre nuestros cursos, o envíanos cualquier comentario referente a nuestro curso.
             </span>
             <span className="text"> 
-                Puedes escribirnos a cualquier hora del día (<a className="link" href="mailto:se@salonescuela.com">se@salonescuela.com</a>) pero también puedes escribirnos un texto vía Whatsapp: <i className="fab fa-whatsapp"></i> +34 615 972 686
+                Puedes escribirnos a cualquier hora del día (<a className="link" href={"mailto:" + email}>{email}</a>) pero también puedes escribirnos un texto vía Whatsapp: <i className="fab fa-whatsapp"></i> +34 615 972 686
             </span>
             <span className="text"> 
                 Nuestra escuela se encuentra en el centro de Madrid, en el barrio de la Latina:<br></br>Calle Arganzuela Nº9<br></br>Local Derecho<br></br>28005, Madrid

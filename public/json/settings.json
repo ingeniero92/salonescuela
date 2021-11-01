@@ -1,0 +1,20 @@
+{
+    "year": "2022",
+    "telephone": "+34 615 972 686",
+    "email": "se@salonescuela.com",
+    "program": "Programa_2020.pdf",
+    "admission": {
+        "startDate": "(**fecha admision**)"
+    },    
+    "scholarship": {
+        "startDate": "(**fecha inicio beca**)",
+        "endDate": "(**fecha fin beca**)",
+        "prizeDate": "(**fecha premio**)"
+    },
+    "socialNetworks": {
+        "twitterURL": "https://www.twitter.com",
+        "facebookURL": "https://www.facebookk.com",
+        "instagramURL": "https://www.instagram.com",
+        "linkedinURL": "https://www.linkedin.com"
+    }    
+}

@@ -1,13 +1,17 @@
 import React from 'react';
 import { observer } from "mobx-react";
 
+import { useAppStore } from '../../providers/StoreRootProvider';
 import LadderTextComponent from '../UI/LadderTextComponent';
 import DownloadLinkComponent from '../UI/DownloadLinkComponent';
 
 const ProgramComponent = observer(() => {
 
-    const downloadText = "Descarga Programa_2020.pdf";
-    const downloadURL = "/pdf/Programa_2020.pdf";
+    const appStore = useAppStore();
+
+    const program = appStore.program;
+    const downloadText = "Descarga " + program;
+    const downloadURL = "/pdf/" + program;
 
     return(
         <section className="section program" id="program">

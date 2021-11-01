@@ -1,20 +1,25 @@
 import React from 'react';
 import { observer } from "mobx-react";
 
+import { useAppStore } from '../../providers/StoreRootProvider';
 import LadderTextComponent from '../UI/LadderTextComponent';
 
 const AdmissionComponent = observer(() => {
 
-    const startDate = "xxxxxx"; // TODO
+    const appStore = useAppStore();
+
+    const startDate = appStore.admissionStartDate;
+    const year      = appStore.year;
+    const email     = appStore.email;
 
     return(
         <section className="section admission" id="admission">
             <span className="title">Admisión</span>
             <span className="text"> 
-                El periodo de admisión para el Curso 2022 se iniciará el {startDate}.
+                El periodo de admisión para el Curso {year} se iniciará el {startDate}.
             </span>
             <span className="text"> 
-                La inscripción solo puedes realizarla a través del email <a className="link" href="mailto:se@salonescuela.com">se@salonescuela.com</a>.<br></br>
+                La inscripción solo puedes realizarla a través del email <a className="link" href={"mailto:" + email}>{email}</a>.<br></br>
                 Las y los candidatos deberán incorporar a su solicitud los siguientes datos y documentos adjuntos:
             </span>
             <ul>

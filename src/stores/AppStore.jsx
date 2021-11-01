@@ -2,11 +2,41 @@ import { makeAutoObservable, runInAction } from "mobx";
 
 export class AppStore {
 
+    /* ROOT STORE */
     rootStore;
+
+    headerTitle = "SALØNESCUELA";    
     modalIsOpen = false;
+
+    /* JSON IMPORT */
+
     news = {};
     teachers = {};
-    headerTitle = "SALØNESCUELA";
+
+    /* GENERALS */
+
+    year = "";
+
+    /* CONTACT */
+    telephone = "";
+    email = "";    
+
+    /* PROGRAM */
+    program = "";
+
+    /* ADMISSION */
+    admissionStartDate      = "";
+
+    /* SCHOLARSHIP */
+    scholarshipStartDate    = "";
+    scholarshipEndDate      = "";
+    scholarshipPrizeDate    = "";
+
+    /* SOCIAL NETWORKS */
+    twitterURL              = "";
+    facebookURL             = "";
+    instagramURL            = "";
+    linkedinURL             = "";
     
     /* INIT */
 
@@ -16,11 +46,45 @@ export class AppStore {
     }
 
     init(){
+        this.fetchSettings();
         this.fetchNews();
         this.fetchTeachers();
     }
 
     /* FETCH */
+
+    fetchSettings(){
+        fetch("json/settings.json")
+            .then(res => res.json())
+            .then(data => runInAction(() => {    
+
+                /* GENERALS */
+
+                this.year = data.year;
+
+                /* CONTACT */
+                this.telephone = data.telephone;
+                this.email = data.email;    
+
+                /* PROGRAM */
+                this.program = data.program;
+
+                /* ADMISSION */
+                this.admissionStartDate      = data.admission.startDate;
+
+                /* SCHOLARSHIP */
+                this.scholarshipStartDate    = data.scholarship.startDate;
+                this.scholarshipEndDate      = data.scholarship.endDate;
+                this.scholarshipPrizeDate    = data.scholarship.prizeDate;
+
+                /* SOCIAL NETWORKS */
+                this.twitterURL              = data.socialNetworks.twitterURL;
+                this.facebookURL             = data.socialNetworks.facebookURL;
+                this.instagramURL            = data.socialNetworks.instagramURL;
+                this.linkedinURL             = data.socialNetworks.linkedinURL;
+
+            }) );
+    }
 
     fetchNews(){
         fetch("json/news.json")

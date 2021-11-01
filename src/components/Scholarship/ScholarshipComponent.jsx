@@ -1,12 +1,16 @@
 import React from 'react';
 import { observer } from "mobx-react";
 import LadderTextComponent from '../UI/LadderTextComponent';
+import { useAppStore } from '../../providers/StoreRootProvider';
 
-const ContactComponent = observer(() => {
+const ScholarshipComponent = observer(() => {
 
-    const startDate  = "xxxxxx"; // TODO
-    const endDate    = "xxxxxx"; // TODO
-    const prizeDate  = "xxxxxx"; // TODO
+    const appStore = useAppStore();
+
+    const startDate  = appStore.scholarshipStartDate;
+    const endDate    = appStore.scholarshipEndDate;
+    const prizeDate  = appStore.scholarshipPrizeDate;
+    const email      = appStore.email;
 
     return(
         <section className="section scholarship" name="scholarship">
@@ -23,7 +27,7 @@ const ContactComponent = observer(() => {
                 secondText={"Cada participante debe crear un archivo comprimido en formato .zip o .rar que no supere los 15 Mb, nombrado por su nombre y apellidos. El archivo se enviará a través de email como se detalla a continuación."}
             />
             <span className="text"> 
-                Cada participante debe enviar a través del email <a className="link" href="mailto:se@salonescuela.com">se@salonescuela.com</a>:
+                Cada participante debe enviar a través del email <a className="link" href={"mailto:" + email}>{email}</a>:
             </span>
             <ul>
                 <li>Nombre y apellidos</li>
@@ -47,4 +51,4 @@ const ContactComponent = observer(() => {
     
 });
 
-export default ContactComponent;
+export default ScholarshipComponent;
