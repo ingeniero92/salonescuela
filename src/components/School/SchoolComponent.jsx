@@ -20,9 +20,9 @@ const SchoolComponent = observer(() => {
                 secondText = {"Trabajaremos en el espacio Nadie Nunca Nada No, espacio independiente fundado por Ramón Mateos en 2014 donde organiza talleres, presentaciones, exposiciones, encuentros con artistas y diferentes actividades enmarcadas en el circuito artístico.\n\nEl espacio dispone de tres zonas: taller, sala diáfana de exposiciones-trabajo y una gran biblioteca con numeros libros y publicaciones de referencia. Contaremos con diferentes herramientas y materiales de uso común y dispondremos de un espacio individual de trabajo.\n\nNadie Nunca Nada No es un espacio donde sucederán diferentes actividades en paralelo al curso, enriqueciendo y fortaleciendo cada sesión."}
             />
             <div className="images">
-                <img src={"/img/school/school1.jpg"} alt={"school1"} />
-                <img src={"/img/school/school2.jpg"} alt={"school2"} />
-                <img src={"/img/school/school3.jpg"} alt={"school3"} />
+                <img src={"/media/img/school/school1.jpg"} alt={"school1"} />
+                <img src={"/media/img/school/school2.jpg"} alt={"school2"} />
+                <img src={"/media/img/school/school3.jpg"} alt={"school3"} />
             </div>
         </section>
     );

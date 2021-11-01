@@ -54,7 +54,7 @@ export class AppStore {
     /* FETCH */
 
     fetchSettings(){
-        fetch("json/settings.json")
+        fetch("media/json/settings.json")
             .then(res => res.json())
             .then(data => runInAction(() => {    
 
@@ -87,13 +87,13 @@ export class AppStore {
     }
 
     fetchNews(){
-        fetch("json/news.json")
+        fetch("media/json/news.json")
             .then(res => res.json())
             .then(data => runInAction(() => {this.news = data}) );
     }
 
     fetchTeachers(){
-        fetch("json/teachers.json")
+        fetch("media/json/teachers.json")
             .then(res => res.json())
             .then(data => runInAction(() => {this.teachers = data}) );
     }

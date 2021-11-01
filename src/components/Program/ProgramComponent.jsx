@@ -11,7 +11,7 @@ const ProgramComponent = observer(() => {
 
     const program = appStore.program;
     const downloadText = "Descarga " + program;
-    const downloadURL = "/pdf/" + program;
+    const downloadURL = "/media/pdf/" + program;
 
     return(
         <section className="section program" id="program">

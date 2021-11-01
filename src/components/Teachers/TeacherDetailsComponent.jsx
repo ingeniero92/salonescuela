@@ -44,7 +44,7 @@ const TeacherDetailsComponent = (props) => {
 
             {img !== undefined &&
                 <div className="img">
-                    <img src={"/img/teachers/" + img} alt={name} />
+                    <img src={"/media/img/teachers/" + img} alt={name} />
                 </div>
             }
 
