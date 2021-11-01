@@ -67,17 +67,17 @@ ul {
 .ladderText {
 
     white-space: pre-line;
-    margin-bottom: $padding-terciary;
+    margin-bottom: $padding-secondary;
 
     .first-text {
         margin-left: $padding-primary;
-        margin-right: $padding-terciary;
+        margin-right: $padding-secondary;
     }
 
     .second-text {
-        margin-left: $padding-terciary;
+        margin-left: $padding-secondary;
         margin-right: $padding-primary;
-        margin-top: $padding-terciary;
+        margin-top: $padding-primary;
         font-size: $font-size-secondary;
     }
 
@@ -97,7 +97,7 @@ ul {
 
         margin-left: $padding-terciary;
         margin-right: $padding-primary;
-        margin-top: $padding-secondary;
+        margin-top: $padding-primary;
         width: calc(100% - 1.25rem);
 
         img {
@@ -115,10 +115,10 @@ ul {
     color: $color-secondary;
     display: block;
     text-align: right;
-    margin-bottom: $padding-terciary;
+    margin-bottom: $padding-primary;
     margin-right: $padding-primary;
     cursor: pointer;
-    font-size: $font-size-secondary;
+    font-size: $font-size-terciary;
 }
 
 /* SOCIAL NETWORKS */
@@ -157,10 +157,6 @@ ul {
 
 /* SECTION */
 
-.section:first-of-type {
-    padding-top: $padding-primary;
-}
-
 .section {
     
     position: relative; 
@@ -180,7 +176,7 @@ ul {
     .text {
         display: block;
         white-space: pre-line;
-        margin-bottom: $padding-terciary;
+        margin-bottom: $padding-secondary;
         margin-left: $padding-primary;
         margin-right: $padding-terciary;
     }   
@@ -208,7 +204,7 @@ ul {
 }
 
 .section:first-of-type {
-    padding-top: $header-height*2; // Twice the header in order to show all in init
+    padding-top: $header-height*2 + $padding-primary; // Twice the header in order to show all in init
 }
 
 /* HEADER */
@@ -231,11 +227,11 @@ header {
 
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         z-index: 10;
         max-width: $width-page;
         width: 100%;
         height: auto;
+        position: relative;
 
         span {
             cursor: pointer;
@@ -245,12 +241,10 @@ header {
     
         i {
             cursor: pointer;
-            padding-right: $padding-primary;
-            padding-top: $padding-primary;
             color: $color-secondary;   
             font-size: $font-size-primary;
             position: absolute;
-            top: $padding-secondary;
+            top: $header-height/2;
             right: $padding-secondary;
             z-index: 5;
         }
@@ -262,26 +256,28 @@ header {
         }
 
         i.no-visible {
+            pointer-events: none;
             opacity: 0;
             transform: rotate(90deg);
             transition: all 0.25s linear;
         }
 
         .fa-times {
-            font-size: $font-size-big;
-            top: $padding-secondary;
+            font-size: $font-size-fa;
+            top: $padding-primary;
         }
 
         .links {
 
             display: flex;
             flex-direction: column;
-            padding: $padding-secondary;
-            line-height: $font-size-big;
+            padding: $padding-primary;
             height: $header-height;
             position: absolute;
             width: 100%;       
+            max-width: $width-page;
             z-index: 3; 
+            letter-spacing: 0.075rem;
 
             a {
                 pointer-events: none;
@@ -297,7 +293,7 @@ header {
             a.active {
                 pointer-events: all;
                 opacity: 1;
-                top: $padding-secondary;
+                top: $padding-primary;
                 color: $color-primary;
                 transition: opacity 0.25s linear, top 0.25s linear;    
                 -webkit-transition: opacity 0.25s linear, top 0.25s linear;
@@ -321,13 +317,15 @@ header {
         .menu {
             display: flex;
             flex-direction: column;
-            padding: $padding-secondary;
+            padding: $padding-primary;
             transition: max-height 0.25s linear;  
             z-index: 4;
+            letter-spacing: 0.075rem;
         }
 
         .menu.closed {
-           
+
+            pointer-events: none;
             max-height: $header-height;
 
             a {
@@ -344,7 +342,7 @@ header {
 
             a {
                 opacity: 1;
-                transition: opacity 0.5s linear;
+                // transition: opacity 0.5s linear;
             }
 
         }
@@ -442,11 +440,12 @@ footer {
         display: block;
         color: $color-secondary;
         font-weight: 100;
+        margin-bottom: $padding-primary;
     }
 
     .teacherDetails {
 
-        margin-bottom: $padding-terciary;
+        margin-bottom: $padding-secondary;
         margin-left: $padding-terciary;
         margin-right: $padding-primary;   
     
@@ -458,7 +457,8 @@ footer {
     
             .teacherName {
                 color: $color-secondary;           
-                margin-right: $padding-primary;
+                margin-right: $font-size-primary/4; // Point size
+                font-size: $font-size-terciary;
             }        
     
             .teacherTitle {
@@ -481,7 +481,7 @@ footer {
     
         .subdescription {
             font-size: $font-size-secondary;
-            margin-top: $padding-secondary;
+            margin-top: $padding-primary;
         }
     
         .url {
@@ -489,12 +489,12 @@ footer {
             font-size: $font-size-secondary;
             cursor: pointer;
             color: $color-secondary;
-            margin-top: $padding-secondary;
+            margin-top: $padding-primary;
         }
     
         .img {
     
-            margin-top: $padding-secondary;
+            margin-top: $padding-primary;
             width: 100%;
     
             img {
@@ -511,8 +511,14 @@ footer {
 /* ADMISSION */
 
 .admission {
+    
     display: flex;
     flex-direction: column;   
+
+    .text {
+        margin-bottom: $padding-primary;
+    }
+
 }
 
 /* NEWS */
@@ -522,12 +528,15 @@ footer {
     .new {
         
         .date {
-            font-size: $font-size-terciary;
+            font-size: $font-size-secondary;
             margin-bottom: 0;
         }
 
-        .link {
-            margin-left: $padding-primary;
+        .newsLink {
+            font-size: $font-size-terciary;
+            margin-left: $padding-secondary;
+            top: -$padding-secondary;
+            position: relative;
         }
 
         img {

@@ -19,7 +19,9 @@ const AdmissionComponent = observer(() => {
                 El periodo de admisión para el Curso {year} se iniciará el {startDate}.
             </span>
             <span className="text"> 
-                La inscripción solo puedes realizarla a través del email <a className="link" href={"mailto:" + email}>{email}</a>.<br></br>
+                La inscripción solo puedes realizarla a través del email <a className="link" href={"mailto:" + email}>{email}</a>.
+            </span>
+            <span className="text"> 
                 Las y los candidatos deberán incorporar a su solicitud los siguientes datos y documentos adjuntos:
             </span>
             <ul>

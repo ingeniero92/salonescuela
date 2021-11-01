@@ -16,7 +16,7 @@ const NewsComponent = observer(() => {
                         <div key={index} className="new">
                             <span className="text date">{value.date}</span>
                             <LadderTextComponent firstText={value.title} secondText={value.description} img={value.img !== undefined ? "img/news/" + value.img : undefined}/>
-                            { value.url !== undefined && value.url.trim() !== "" && <a href={value.url} target="blank" className="link">{value.link}</a> }
+                            { value.url !== undefined && value.url.trim() !== "" && <a href={value.url} target="blank" className="newsLink">{value.link}</a> }
                         </div>
                     ))}            
             </section>
