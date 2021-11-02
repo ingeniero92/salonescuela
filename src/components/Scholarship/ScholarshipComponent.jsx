@@ -20,7 +20,7 @@ const ScholarshipComponent = observer(() => {
             </span>
             <LadderTextComponent 
                 firstText={"Texto informativo de la beca"}
-                secondText={"Está abierta a cualquier persona mayor de edad, independientemente de su lugar de procedencia y nacionalidad.\n\nCada participante puede presentarse con un único proyecto.\n\nLos participantes asumen y aceptan las bases de la convocatoria. Cualquier duda sobre su interpretación será resuelta por Salønescuela de forma inapelable aplicando estas bases de buena fe. El incumplimiento de cualquiera de las bases supone la exclusión inmediata de la convocatoria."}
+                secondText={"Está abierta a cualquier persona mayor de edad, independientemente de su lugar de procedencia y nacionalidad.<span class='newLine'></span>Cada participante puede presentarse con un único proyecto.<span class='newLine'></span>Los participantes asumen y aceptan las bases de la convocatoria. Cualquier duda sobre su interpretación será resuelta por Salønescuela de forma inapelable aplicando estas bases de buena fe. El incumplimiento de cualquiera de las bases supone la exclusión inmediata de la convocatoria."}
             />
             <LadderTextComponent 
                 firstText={"¿Cómo participar?"}

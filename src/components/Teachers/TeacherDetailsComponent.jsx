@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+import LadderTextComponent from '../UI/LadderTextComponent';
 
 const TeacherDetailsComponent = (props) => {
 
@@ -7,23 +9,8 @@ const TeacherDetailsComponent = (props) => {
     const description       = props.teacher.description;
     const subdescription    = props.teacher.subdescription;
     const url               = props.teacher.url;
+    const link              = props.teacher.link;
     const img               = props.teacher.img;
-
-    const textExpanded = "Leer menos";
-    const textNoExpanded = "Leer más";
-
-    const [secondText, setSecondText] = useState(false);
-    const [secondTextLink, setSecondTextLink] = useState(textNoExpanded);
-
-    function changeText(){
-        if(secondText){
-            setSecondText(false);
-            setSecondTextLink(textNoExpanded);
-        } else {
-            setSecondText(true);
-            setSecondTextLink(textExpanded);
-        }
-    }
 
     return(
         <div className="teacherDetails">
@@ -33,28 +20,13 @@ const TeacherDetailsComponent = (props) => {
                 <span className="teacherTitle">{title}.</span>
             </div>
 
-            {description !== undefined &&
-                <div className="description">
-                    <span>{description}</span>
-                    {subdescription !== undefined &&
-                        <span className="link" onClick={ () => changeText()}>{secondTextLink}</span>
-                    }
-                </div>
-            }
-
-            {img !== undefined &&
-                <div className="img">
-                    <img src={"/media/img/teachers/" + img} alt={name} />
-                </div>
-            }
-
-            {secondText && subdescription !== undefined &&
-                <div className="subdescription">
-                    <span>{subdescription}</span>
-                </div>
-            }
-
-            <span className="url link">{url}</span>
+            <LadderTextComponent 
+                firstText={description} 
+                secondText={subdescription} 
+                images={img !== undefined ? [{src:"/media/img/teachers/" + img, alt: name}] : undefined}
+                url={url !== undefined && url.trim() !== "" ? url : undefined}
+                link={link !== undefined && link.trim() !== "" ? link: undefined}
+            />          
 
         </div>
     );

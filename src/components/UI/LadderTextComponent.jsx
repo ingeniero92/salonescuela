@@ -12,6 +12,15 @@ const LadderTextComponent = observer((props) => {
     const [thirdText, setThirdText] = useState(false);
     const [thirdTextLink, setThirdTextLink] = useState(textNoExpanded);
 
+    let urlName = "";
+    if(props.url !== undefined){
+        if(props.link !== undefined){
+            urlName = props.link;
+        } else {
+            urlName = props.url;
+        }
+    }
+
     function changeText(text){
         if(text === 2){
             if(secondText){
@@ -37,9 +46,9 @@ const LadderTextComponent = observer((props) => {
 
             {props.firstText !== undefined &&
                 <div className="first-text">
-                    <span>{props.firstText}</span>
+                    <span dangerouslySetInnerHTML={{__html: props.firstText}}></span>
                     {props.secondText !== undefined &&
-                        <span className="link" onClick={ () => changeText(2)}>{secondTextLink}</span>
+                        <span className="link" onClick={ () => changeText(2)} >{secondTextLink}</span>
                     }
                 </div>
             }
@@ -48,20 +57,30 @@ const LadderTextComponent = observer((props) => {
                 <div className="img">
                     <img src={props.img} alt={props.img} />
                 </div>
-            }
+            }           
 
             {secondText && props.secondText !== undefined &&
                 <div className="second-text">
-                    <span>{props.secondText}</span>
+                    {props.images !== undefined && (
+                        <div className="images">
+                        { props.images.map( (value, key) => (
+                            <img key={key} src={value.src} alt={value.alt} />
+                        ))}
+                        </div>
+                    )}
+                    <span dangerouslySetInnerHTML={{__html: props.secondText}}></span>
                     {props.thirdText !== undefined && 
-                        <span className="link" onClick={ () => changeText(3)}>{thirdTextLink}</span>
+                        <span className="link" onClick={ () => changeText(3)} >{thirdTextLink}</span>
+                    }                    
+                    {props.url !== undefined &&
+                        <a href={props.url} className="url">{urlName}</a>
                     }
                 </div>
             }
 
             {secondText && thirdText && props.thirdText !== undefined && 
                 <div className="third-text">
-                    <span>{props.thirdText}</span>
+                    <span dangerouslySetInnerHTML={{__html: props.thirdText}}></span>
                 </div>
             }
 

@@ -3,7 +3,7 @@
 $font-stack: "GTAmerica", "Roboto", monospace, sans-serif;
 
 $width-page: 900px;
-$header-height: 1.5rem;
+$header-height: 1.25rem;
 
 $color-primary: white;
 $color-secondary: rgb(0,255,153);
@@ -16,14 +16,16 @@ $pixel-color: #666666;
 $padding-primary: 0.4rem;
 $padding-secondary: 0.8rem;
 $padding-terciary: 1rem;
+$padding-icon: 0.9rem;
 $padding-section: 10rem;
 
 $font-size-primary: 1rem;
-$font-size-secondary: 0.62rem;
-$font-size-terciary: 0.75rem;
+$font-size-secondary: 0.7rem;
 $font-size-fa: 1.25rem;
 $font-size-big: 1.5rem;
 
-$line-height-primary: 1em;
-$line-height-secondary: 1.05em;
+$line-height-primary: 1.1em;
+$line-height-secondary: 1.3em;
 $line-height-terciary: 1.1em;
+
+$letter-spacing-menu: 0.095rem;

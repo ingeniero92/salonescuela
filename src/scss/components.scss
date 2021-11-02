@@ -53,7 +53,6 @@ ul {
 
     margin-top: 0;
     margin-right: $padding-terciary;
-    list-style: square;
     font-size: $font-size-secondary;
 
     li:not(:last-child) { 
@@ -80,18 +79,29 @@ ul {
         margin-right: $padding-primary;
         margin-top: $padding-primary;
         font-size: $font-size-secondary;
+        line-height: $line-height-secondary;
     }
 
     .third-text {
         margin-left: $padding-terciary;
         margin-right: $padding-terciary;
         margin-top: $padding-terciary;
-        font-size: $font-size-terciary;
+        font-size: $font-size-secondary;
+    }    
+
+    .newLine {
+        display: block;
+        height: $padding-primary;
     }
 
     .link {
         margin-left: 0.25rem;
         word-break: keep-all;
+    }
+
+    .url {
+        color: $color-secondary;
+        cursor: pointer;
     }
 
     .img {
@@ -119,7 +129,7 @@ ul {
     margin-bottom: $padding-secondary;
     margin-right: $padding-primary;
     cursor: pointer;
-    font-size: $font-size-terciary;
+    font-size: $font-size-secondary;
 }
 
 /* SOCIAL NETWORKS */
@@ -207,20 +217,18 @@ ul {
 @media (max-width: 400px) {
     .section {
         .images {
-            padding-left: $padding-primary;
-            padding-right: $padding-secondary;
             img {
                 width: 100%;
                 max-width: 400px;
                 padding: 0;
-                margin-bottom: $padding-secondary;
+                margin-bottom: $padding-primary;
             }
         }
     }
 }
 
 .section:first-of-type {
-    padding-top: $header-height*2 + $padding-primary; // Twice the header in order to show all in init
+    padding-top: $header-height*2 + $padding-terciary; // Twice the header in order to show all in init + padding
 }
 
 /* HEADER */
@@ -253,6 +261,7 @@ header {
             cursor: pointer;
             padding-left: $padding-primary;
             color: $color-primary;
+            letter-spacing: $letter-spacing-menu;
         }
     
         i {
@@ -260,7 +269,7 @@ header {
             color: $color-secondary;   
             font-size: $font-size-primary;
             position: absolute;
-            top: $padding-secondary;
+            top: $padding-icon;
             right: $padding-secondary;
             z-index: 5;
         }
@@ -286,7 +295,7 @@ header {
 
         .fa-times {
             font-size: $font-size-fa;
-            top: $header-height/2;
+            top: 0.725rem;
         }
 
         .links {
@@ -299,7 +308,7 @@ header {
             width: 100%;       
             max-width: $width-page;
             z-index: 3; 
-            letter-spacing: 0.075rem;
+            letter-spacing: $letter-spacing-menu;
 
             a {
                 pointer-events: none;
@@ -349,6 +358,7 @@ header {
             flex-direction: column;
             padding: $padding-primary;
             padding-top: $padding-secondary;
+            padding-bottom: $padding-secondary;
             transition: max-height 0.25s linear;  
             -webkit-transition: max-height 0.25s linear;  
             -moz-transition: max-height 0.25s linear;  
@@ -497,7 +507,7 @@ footer {
             .teacherName {
                 color: $color-secondary;           
                 margin-right: $font-size-primary/4; // Point size
-                font-size: $font-size-terciary;
+                font-size: $font-size-secondary;
             }        
     
             .teacherTitle {
@@ -505,43 +515,48 @@ footer {
             }
     
         }
+
+        .ladderText {
+
+            .first-text {
     
-        .description {
-    
-            font-size: $font-size-secondary;
-            margin-top: $padding-primary;
-    
-            .link {
-                margin-left: 0.25rem;
-                word-break: keep-all;
+                font-size: $font-size-secondary;
+                margin-top: $padding-primary/4;
+                margin-left: 0;
+                line-height: $line-height-secondary;
+        
+                .link {
+                    margin-left: 0.25rem;
+                    word-break: keep-all;
+                }
+        
             }
-    
-        }
-    
-        .subdescription {
-            font-size: $font-size-secondary;
-            margin-top: $padding-primary;
-        }
-    
-        .url {
-            display: block;
-            font-size: $font-size-secondary;
-            cursor: pointer;
-            color: $color-secondary;
-            margin-top: $padding-primary;
-        }
-    
-        .img {
-    
-            margin-top: $padding-primary;
-            width: 100%;
-    
-            img {
+        
+            .second-text {
+                margin-left: 0;
+            }
+        
+            .url {
+                display: block;
+                font-size: $font-size-secondary;
+                cursor: pointer;
+                color: $color-secondary;
+                margin-top: $padding-primary;
+            }
+        
+            .img {
+        
+                margin-top: $padding-primary;
                 width: 100%;
-                max-width: 400px;
+        
+                img {
+                    width: 100%;
+                    max-width: 400px;
+                }
+        
             }
-    
-        }
+
+        }   
     
     }
 
@@ -549,15 +564,9 @@ footer {
 
 /* ADMISSION */
 
-.admission {
-    
+.admission {    
     display: flex;
     flex-direction: column;   
-
-    .text {
-        margin-bottom: $padding-primary;
-    }
-
 }
 
 /* NEWS */
@@ -572,7 +581,7 @@ footer {
         }
 
         .newsLink {
-            font-size: $font-size-terciary;
+            font-size: $font-size-secondary;
             margin-left: $padding-secondary;
             top: -$padding-secondary;
             position: relative;
