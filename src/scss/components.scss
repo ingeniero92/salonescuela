@@ -102,6 +102,8 @@ ul {
     .url {
         color: $color-secondary;
         cursor: pointer;
+        display: block;
+        margin-top: $padding-primary;
     }
 
     .img {
@@ -205,7 +207,7 @@ ul {
         flex-wrap: wrap;
 
         img {
-            max-width: 300px;
+            max-width: 400px;
             height: auto;
             padding: $padding-primary;
         }
@@ -228,7 +230,7 @@ ul {
 }
 
 .section:first-of-type {
-    padding-top: $header-height*2 + $padding-terciary; // Twice the header in order to show all in init + padding
+    padding-top: $padding-terciary*3;
 }
 
 /* HEADER */
@@ -237,164 +239,83 @@ header {
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     position: fixed;
     width: 100%;
-    background-color: $menu-color;
+    background-color: $color-terciary;
     background-image: url("/media/img/fondo.png");
     background-size: 200%;
     background-position: center center;
     background-repeat: no-repeat;
     z-index: 1;
 
-    .content {
+    span {
+        cursor: pointer;
+        color: $color-primary;
+        letter-spacing: $letter-spacing-menu;
+    }
+
+    .link {
+        color: $color-primary;
+    }
+    
+    /* ICON CLOSE OPEN */
+
+    i {
+        cursor: pointer;
+        color: $color-secondary;   
+        position: absolute;
+        top: $padding-menu-v + 0.1rem;
+        right: $padding-secondary;
+        z-index: 5;
+    }        
+
+    .fa-times {
+        font-size: $font-size-fa;
+        top: $padding-menu-v;
+    }
+
+    /* TITLE LINKS */
+
+    .links {
 
         display: flex;
-        flex-direction: row;
-        z-index: 10;
+        flex-direction: column;
+        padding-left: $padding-menu-h;
+        padding-top: $padding-menu-v;
+        position: absolute;
+        width: 100%;       
         max-width: $width-page;
-        width: 100%;
-        height: auto;
-        position: relative;
+        z-index: 3; 
 
-        span {
-            cursor: pointer;
-            padding-left: $padding-primary;
-            color: $color-primary;
-            letter-spacing: $letter-spacing-menu;
-        }
-    
-        i {
-            cursor: pointer;
-            color: $color-secondary;   
-            font-size: $font-size-primary;
+        a {
             position: absolute;
-            top: $padding-icon;
-            right: $padding-secondary;
-            z-index: 5;
+            z-index: 1;      
+        }            
+
+        a.active {
+            z-index: 2;
         }
 
-        i.visible {
-            opacity: 1;
-            transform: rotate(180deg);
-            transition: all 0.25s linear;
-            -webkit-transition: all 0.25s linear;
-            -moz-transition: all 0.25s linear;
-            -o-transition: all 0.25s linear;
-        }
+    }        
 
-        i.no-visible {
-            pointer-events: none;
-            opacity: 0;
-            transform: rotate(90deg);
-            transition: all 0.25s linear;
-            -webkit-transition: all 0.25s linear;
-            -moz-transition: all 0.25s linear;
-            -o-transition: all 0.25s linear;
-        }
+    /* MENU */
 
-        .fa-times {
-            font-size: $font-size-fa;
-            top: 0.725rem;
-        }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        max-height: $header-height;
+        padding-left: $padding-menu-h;
+        padding-top: $padding-menu-v;
+        padding-bottom: $padding-menu-v;
+        z-index: 4;
+    }        
 
-        .links {
+}
 
-            display: flex;
-            flex-direction: column;
-            padding: $padding-primary;
-            height: $header-height;
-            position: absolute;
-            width: 100%;       
-            max-width: $width-page;
-            z-index: 3; 
-            letter-spacing: $letter-spacing-menu;
-
-            a {
-                pointer-events: none;
-                opacity: 0;
-                position: absolute;
-                top: $padding-secondary;
-                transition: opacity 0.25s linear, top 0.25s linear;    
-                -webkit-transition: opacity 0.25s linear, top 0.25s linear;
-                -moz-transition: opacity 0.25s linear, top 0.25s linear;
-                -o-transition: opacity 0.25s linear, top 0.25s linear;  
-                z-index: 1;      
-            }            
-
-            a.active {
-                pointer-events: all;
-                opacity: 1;
-                top: $padding-secondary;
-                color: $color-primary;
-                transition: opacity 0.25s linear, top 0.25s linear;    
-                -webkit-transition: opacity 0.25s linear, top 0.25s linear;
-                -moz-transition: opacity 0.25s linear, top 0.25s linear;
-                -o-transition: opacity 0.25s linear, top 0.25s linear;  
-                z-index: 2;
-            }
-
-        }
-
-        .links.open {
-            opacity: 0;
-            transition: opacity 0.25s linear;
-            -webkit-transition: opacity 0.25s linear;
-            -moz-transition: opacity 0.25s linear;
-            -o-transition: opacity 0.25s linear;         
-
-        }
-
-        .links.closed {
-            opacity: 1;
-            transition: opacity 0.15s linear;
-            -webkit-transition: opacity 0.15s linear;
-            -moz-transition: opacity 0.15s linear;
-            -o-transition: opacity 0.15s linear;
-        }
-
-        .menu {
-            display: flex;
-            flex-direction: column;
-            padding: $padding-primary;
-            padding-top: $padding-secondary;
-            padding-bottom: $padding-secondary;
-            transition: max-height 0.25s linear;  
-            -webkit-transition: max-height 0.25s linear;  
-            -moz-transition: max-height 0.25s linear;  
-            -o-transition: max-height 0.25s linear;  
-            z-index: 4;
-            letter-spacing: 0.075rem;
-        }
-
-        .menu.closed {
-
-            pointer-events: none;
-            max-height: $header-height;
-
-            a {
-                opacity: 0;
-                transition: opacity 0.15s linear;
-                -webkit-transition: opacity 0.15s linear;
-                -moz-transition: opacity 0.15s linear;
-                -o-transition: opacity 0.15s linear;
-            }
-
-        }
-
-        .menu.open {
-
-            height: auto;
-            max-height: 280px;
-
-            a {
-                opacity: 1;
-            }
-
-        }
-
-    }           
-
+@media (min-width: 769px) {
+    header {
+        display: none;
+    }   
 }
 
 /* FOOTER */

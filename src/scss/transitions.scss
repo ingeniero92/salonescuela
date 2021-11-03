@@ -32,3 +32,108 @@
 .fade-exit-done {
     opacity: 0;
 }
+
+/* HEADER */
+
+header {
+
+    /* ICON CLOSE OPEN */
+
+    i.visible {
+        opacity: 1;
+        transform: rotate(180deg);
+        transition: all 0.25s linear;
+        -webkit-transition: all 0.25s linear;
+        -moz-transition: all 0.25s linear;
+        -o-transition: all 0.25s linear;
+    }
+
+    i.no-visible {
+        pointer-events: none;
+        opacity: 0;
+        transform: rotate(90deg);
+        transition: all 0.25s linear;
+        -webkit-transition: all 0.25s linear;
+        -moz-transition: all 0.25s linear;
+        -o-transition: all 0.25s linear;
+    }
+
+    /* LINK TRANSITIONS */
+
+    .links {
+
+        a {
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.25s linear, top 0.25s linear;    
+            -webkit-transition: opacity 0.25s linear, top 0.25s linear;
+            -moz-transition: opacity 0.25s linear, top 0.25s linear;
+            -o-transition: opacity 0.25s linear, top 0.25s linear;  
+        }            
+
+        a.active {
+            pointer-events: all;
+            opacity: 1;
+            transition: opacity 0.25s linear, top 0.25s linear;    
+            -webkit-transition: opacity 0.25s linear, top 0.25s linear;
+            -moz-transition: opacity 0.25s linear, top 0.25s linear;
+            -o-transition: opacity 0.25s linear, top 0.25s linear;  
+        }
+
+    }
+
+    .links.open {
+        opacity: 0;
+        transition: opacity 0.25s linear;
+        -webkit-transition: opacity 0.25s linear;
+        -moz-transition: opacity 0.25s linear;
+        -o-transition: opacity 0.25s linear;       
+    }
+
+    .links.closed {
+        opacity: 1;
+        transition: opacity 0.15s linear;
+        -webkit-transition: opacity 0.15s linear;
+        -moz-transition: opacity 0.15s linear;
+        -o-transition: opacity 0.15s linear;
+    }
+
+    /* MENU TRANSITIONS */
+
+    .menu {
+        transition: max-height 0.25s linear;  
+        -webkit-transition: max-height 0.25s linear;  
+        -moz-transition: max-height 0.25s linear;  
+        -o-transition: max-height 0.25s linear;  
+    }
+
+    .menu.open {
+
+        height: auto;
+        max-height: 240px;
+
+        a {
+            opacity: 1;
+            transition: opacity 0.15s linear;
+            -webkit-transition: opacity 0.15s linear;
+            -moz-transition: opacity 0.15s linear;
+            -o-transition: opacity 0.15s linear;
+        }
+
+    }
+
+    .menu.closed {
+
+        pointer-events: none;
+
+        a {
+            opacity: 0;
+            transition: opacity 0.15s linear;
+            -webkit-transition: opacity 0.15s linear;
+            -moz-transition: opacity 0.15s linear;
+            -o-transition: opacity 0.15s linear;
+        }
+
+    }    
+
+}
