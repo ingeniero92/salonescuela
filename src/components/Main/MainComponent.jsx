@@ -8,18 +8,22 @@ import AdmissionComponent from '../Admission/AdmissionComponent';
 import NewsComponent from '../News/NewsComponent';
 import ContactComponent from '../Contact/ContactComponent';
 import ScholarshipComponent from '../Scholarship/ScholarshipComponent';
+import MenuLeftComponent from '../Menu/MenuLeftComponent';
 
 const MainComponent = observer(() => {
 
     return(
         <div className="main-content">
-            <SchoolComponent />
-            <ProgramComponent />
-            <TeachersComponent />
-            <AdmissionComponent />
-            <NewsComponent />
-            <ContactComponent />
-            <ScholarshipComponent />
+            <MenuLeftComponent />
+            <div className="sections">
+                <SchoolComponent />
+                <ProgramComponent />
+                <TeachersComponent />
+                <AdmissionComponent />
+                <NewsComponent />
+                <ContactComponent />
+                <ScholarshipComponent />
+            </div>
         </div>
     );
     

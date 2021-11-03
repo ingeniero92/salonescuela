@@ -137,3 +137,33 @@ header {
     }    
 
 }
+
+/* NAVBAR */
+
+.main-content {
+
+    .navbar {
+
+        a {
+            .link {
+                color: $color-primary;
+                transition: color 0.25s linear;
+                -webkit-transition: color 0.25s linear;
+                -moz-transition: color 0.25s linear;
+                -o-transition: color 0.25s linear;
+            }            
+        }
+
+        a.active {
+            .link {
+                color: $color-secondary;
+                transition: color 0.25s linear;
+                -webkit-transition: color 0.25s linear;
+                -moz-transition: color 0.25s linear;
+                -o-transition: color 0.25s linear;
+            }
+        }
+
+    }    
+
+}
