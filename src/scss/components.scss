@@ -5,6 +5,42 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 
+@media (min-width: 1024px) {
+    html {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1280px) {
+    html {
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 1400px) {
+    html {
+        font-size: 38px;
+    }
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: 44px;
+    }
+}
+
+@media (min-width: 1768px) {
+    html {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 54px;
+    }
+}
+
 body {
     font-family: "GTAmerica", sans-serif;
     margin: 0;
@@ -174,10 +210,11 @@ ul {
         flex-direction: column;
         padding-top: $padding-terciary;
         position: fixed;
+        font-size: $font-size-primary;           
 
         a {
             padding-left: $padding-terciary;    
-            font-size: $font-size-medium;           
+            margin-bottom: $padding-primary/2;
         }
 
     }    
@@ -188,7 +225,7 @@ ul {
     .main-content {
         .navbar {
             display: flex;
-            width: 25%;
+            width: 25%;         
         }    
         .sections {
             padding-left: 25%;
@@ -231,20 +268,21 @@ ul {
     .images {
 
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
 
         img {
             max-width: 400px;
             height: auto;
-            padding: $padding-primary;
+            padding-bottom: $padding-primary;
+            padding-right: $padding-primary;
         }
 
     }   
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
     .section {
         .images {
             img {
@@ -259,6 +297,12 @@ ul {
 
 .section:first-of-type {
     padding-top: $padding-terciary*3;
+}
+
+@media (min-width: 769px) {
+    .section:first-of-type {
+        padding-top: $padding-terciary;
+    }
 }
 
 /* HEADER */
@@ -443,7 +487,7 @@ footer {
     .teacherDetails {
 
         margin-bottom: $padding-secondary;
-        margin-left: $padding-terciary;
+        margin-left: $padding-secondary;
         margin-right: $padding-primary;   
     
         .nameTitle {
@@ -481,7 +525,8 @@ footer {
             }
         
             .second-text {
-                margin-left: 0;
+                margin-left: $padding-primary;
+                margin-right: 0;
             }
         
             .url {
@@ -508,6 +553,18 @@ footer {
     
     }
 
+}
+
+@media (min-width: 769px) {
+    .teachers {
+        .teacherDetails {
+            .ladderText {
+                .second-text {
+                    margin-left: $padding-primary
+                }
+            }
+        }
+    }
 }
 
 /* ADMISSION */
