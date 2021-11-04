@@ -3,6 +3,7 @@ import { makeAutoObservable, runInAction } from "mobx";
 export class AppStore {
 
     /* ROOT STORE */
+    
     rootStore;
 
     headerTitle = "SALØNESCUELA";    
@@ -11,7 +12,8 @@ export class AppStore {
     /* JSON IMPORT */
 
     news = {};
-    teachers = {"tutores": {}, "invitados": {}};
+    tutores = {};
+    invitados = {};
 
     /* GENERALS */
 
@@ -86,18 +88,18 @@ export class AppStore {
             }) );
     }
 
-    fetchNews(){
+    async fetchNews(){
         fetch("/public/json/news.json")
             .then(res => res.json())
             .then(data => runInAction(() => {this.news = data}) );
     }
 
-    fetchTeachers(){
+    async fetchTeachers(){
         fetch("/public/json/teachers.json")
             .then(res => res.json())
             .then(data => runInAction(() => {
-                this.teachers.tutores = data.tutores;
-                this.teachers.invitados = data.invitados;
+                this.tutores = data.tutores;
+                this.invitados = data.invitados;
             }) );
     }
 

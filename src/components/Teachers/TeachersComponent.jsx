@@ -11,24 +11,24 @@ const TeachersComponent = observer(() => {
     return(
         <section className="section teachers" id="teachers">
             
-            {Object.keys(appStore.teachers.tutores).length > 0 &&
+            {Object.keys(appStore.tutores).length > 0 &&
                 <React.Fragment>
                     <span className="title">Tutores {appStore.year}.</span>            
-                    {Object.values(appStore.teachers.tutores).map( (value, index) => (
+                    {Object.values(appStore.tutores).map( (value, index) => (
                         <TeacherDetailsComponent key={index} teacher={value}/>
                     ))}      
                 </React.Fragment>
             }
 
-            {Object.keys(appStore.teachers.invitados).length > 0 &&
+            {Object.keys(appStore.invitados).length > 0 &&
                 <React.Fragment>
                     <span className="title">Profesores invitados {appStore.year}.</span>            
-                    {Object.values(appStore.teachers.invitados).map( (value, index) => (
+                    {Object.values(appStore.invitados).map( (value, index) => (
                         <TeacherDetailsComponent key={index} teacher={value}/>
                     ))}   
                 </React.Fragment>
             }
-            
+
         </section>
     );
     
