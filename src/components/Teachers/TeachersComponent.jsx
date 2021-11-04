@@ -10,10 +10,25 @@ const TeachersComponent = observer(() => {
 
     return(
         <section className="section teachers" id="teachers">
-            <span className="title">Tutores {appStore.year}.</span>            
-                {Object.values(appStore.teachers).map( (value, index) => (
-                    <TeacherDetailsComponent key={index} teacher={value}/>
-                ))}            
+            
+            {Object.keys(appStore.teachers.tutores).length > 0 &&
+                <React.Fragment>
+                    <span className="title">Tutores {appStore.year}.</span>            
+                    {Object.values(appStore.teachers.tutores).map( (value, index) => (
+                        <TeacherDetailsComponent key={index} teacher={value}/>
+                    ))}      
+                </React.Fragment>
+            }
+
+            {Object.keys(appStore.teachers.invitados).length > 0 &&
+                <React.Fragment>
+                    <span className="title">Profesores invitados {appStore.year}.</span>            
+                    {Object.values(appStore.teachers.invitados).map( (value, index) => (
+                        <TeacherDetailsComponent key={index} teacher={value}/>
+                    ))}   
+                </React.Fragment>
+            }
+            
         </section>
     );
     

@@ -6,9 +6,9 @@ import LadderTextComponent from '../UI/LadderTextComponent';
 const SchoolComponent = observer(() => {
 
     const images = [
-        {src:"/media/img/school/school1.jpg", alt:"school1"},
-        {src:"/media/img/school/school2.jpg", alt:"school2"},
-        {src:"/media/img/school/school3.jpg", alt:"school3"}
+        {src:"/public/img/school/school1.jpg", alt:"school1"},
+        {src:"/public/img/school/school2.jpg", alt:"school2"},
+        {src:"/public/img/school/school3.jpg", alt:"school3"}
     ]
 
     return(

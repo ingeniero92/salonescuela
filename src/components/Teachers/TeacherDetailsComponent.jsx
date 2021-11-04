@@ -23,7 +23,7 @@ const TeacherDetailsComponent = (props) => {
             <LadderTextComponent 
                 firstText={description} 
                 secondText={subdescription} 
-                images={img !== undefined ? [{src:"/media/img/teachers/" + img, alt: name}] : undefined}
+                images={img !== undefined ? [{src:"/public/img/teachers/" + img, alt: name}] : undefined}
                 url={url !== undefined && url.trim() !== "" ? url : undefined}
                 link={link !== undefined && link.trim() !== "" ? link: undefined}
             />          

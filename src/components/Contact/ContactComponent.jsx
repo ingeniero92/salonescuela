@@ -17,9 +17,6 @@ const ContactComponent = observer(() => {
     return(
         <section className="section contact" id="contact">
             <span className="title">Contacto</span>
-            <div className="socialNetworks">
-                <SocialNetworksComponent twitter={twitter} facebook={facebook} instagram={instagram} linkedin={linkedin}/>
-            </div>
             <span className="text"> 
                 Solicita información sobre nuestros cursos, o envíanos cualquier comentario referente a nuestro curso.
             </span>

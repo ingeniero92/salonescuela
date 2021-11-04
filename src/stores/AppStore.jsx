@@ -11,7 +11,7 @@ export class AppStore {
     /* JSON IMPORT */
 
     news = {};
-    teachers = {};
+    teachers = {"tutores": {}, "invitados": {}};
 
     /* GENERALS */
 
@@ -54,7 +54,7 @@ export class AppStore {
     /* FETCH */
 
     fetchSettings(){
-        fetch("media/json/settings.json")
+        fetch("/public/json/settings.json")
             .then(res => res.json())
             .then(data => runInAction(() => {    
 
@@ -87,15 +87,18 @@ export class AppStore {
     }
 
     fetchNews(){
-        fetch("media/json/news.json")
+        fetch("/public/json/news.json")
             .then(res => res.json())
             .then(data => runInAction(() => {this.news = data}) );
     }
 
     fetchTeachers(){
-        fetch("media/json/teachers.json")
+        fetch("/public/json/teachers.json")
             .then(res => res.json())
-            .then(data => runInAction(() => {this.teachers = data}) );
+            .then(data => runInAction(() => {
+                this.teachers.tutores = data.tutores;
+                this.teachers.invitados = data.invitados;
+            }) );
     }
 
     /* MODAL */

@@ -1,8 +1,14 @@
 /* BODY */
 
 html {
-    font-size: 24px;
+    font-size: 32px;
     -webkit-tap-highlight-color: transparent;
+}
+
+@media (min-width: 769px) {
+    html {
+        font-size: 24px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -90,6 +96,7 @@ ul {
     margin-top: 0;
     margin-right: $padding-terciary;
     font-size: $font-size-secondary;
+    padding-left: $padding-secondary*2;
 
     li:not(:last-child) { 
         margin-bottom: $padding-primary;  
@@ -151,6 +158,7 @@ ul {
 
         img {
             width: 100%;
+            height: auto;
             max-width: 400px;
         }
 
@@ -499,7 +507,7 @@ footer {
             .teacherName {
                 color: $color-secondary;           
                 margin-right: $font-size-primary/4; // Point size
-                font-size: $font-size-secondary;
+                font-size: $font-size-primary;
             }        
     
             .teacherTitle {
@@ -544,6 +552,7 @@ footer {
         
                 img {
                     width: 100%;
+                    height: auto;
                     max-width: 400px;
                 }
         
@@ -594,6 +603,7 @@ footer {
 
         img {
             width: 100%;
+            height: auto;
             max-width: 400px;
         }
 

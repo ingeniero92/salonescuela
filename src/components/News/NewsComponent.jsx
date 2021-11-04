@@ -18,7 +18,7 @@ const NewsComponent = observer(() => {
                             <LadderTextComponent 
                                 firstText={value.title} 
                                 secondText={value.description} 
-                                images={value.img !== undefined ? [{src:"/media/img/news/" + value.img, alt: value.title}] : undefined}
+                                images={value.img !== undefined ? [{src:"/public/img/news/" + value.img, alt: value.title}] : undefined}
                                 url={value.url !== undefined && value.url.trim() !== "" ? value.url : undefined}
                                 link={value.link !== undefined && value.link.trim() !== "" ? value.link : undefined}
                             />
