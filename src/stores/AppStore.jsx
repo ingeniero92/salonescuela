@@ -6,8 +6,12 @@ export class AppStore {
     
     rootStore;
 
-    headerTitle = "SALØNESCUELA";    
-    modalIsOpen = false;
+    /* VARS */
+
+    headerTitle         = "SALØNESCUELA";    
+    modalIsOpen         = false;
+    activeSection       = "init";
+    lastActiveSection   = "init";
 
     /* JSON IMPORT */
 
@@ -117,6 +121,25 @@ export class AppStore {
     /* HEADER TITLE */
     setHeaderTitle(title){
         this.headerTitle = title;
+    }
+
+    /* SCROLL */
+
+    setActiveSection(section){
+        // console.log("setActiveSection " + section);
+        if(section !== this.lastActiveSection && section !== this.activeSection){
+            this.activeSection = section;            
+        }      
+    }
+
+    setLastActiveSection(section){
+        // console.log("setLastActiveSection " + section);
+        if(section !== this.activeSection){
+            this.lastActiveSection = section;    
+            if(this.activeSection !== this.lastActiveSection){
+                console.log("Change to " + this.activeSection + " from " + this.lastActiveSection);
+            }             
+        }                 
     }
 
 }

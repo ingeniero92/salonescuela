@@ -149,20 +149,22 @@ ul {
         margin-top: $padding-primary;
     }
 
-    .img {
+    .images {
 
-        margin-left: $padding-terciary;
-        margin-right: $padding-primary;
-        margin-top: $padding-primary;
-        width: calc(100% - 1.25rem);
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
 
         img {
-            width: 100%;
-            height: auto;
+            align-self: flex-start; // SAFARI: For those who needs to use height auto and parent of image is set to display: flex, this trick will help.
+            //justify-self: flex-start; // SAFARI: If your parent of image has set flex-direction: column, you need to do this instead.
             max-width: 400px;
+            height: auto;
+            padding-bottom: $padding-primary;
+            padding-right: $padding-primary;
         }
 
-    }
+    }   
 
 }
 
@@ -273,20 +275,7 @@ ul {
         text-decoration: none;
     }
 
-    .images {
-
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-
-        img {
-            max-width: 400px;
-            height: auto;
-            padding-bottom: $padding-primary;
-            padding-right: $padding-primary;
-        }
-
-    }   
+    
 
 }
 
@@ -543,20 +532,7 @@ footer {
                 cursor: pointer;
                 color: $color-secondary;
                 margin-top: $padding-primary;
-            }
-        
-            .img {
-        
-                margin-top: $padding-primary;
-                width: 100%;
-        
-                img {
-                    width: 100%;
-                    height: auto;
-                    max-width: 400px;
-                }
-        
-            }
+            }        
 
         }   
     
@@ -599,12 +575,6 @@ footer {
             margin-left: $padding-secondary;
             top: -$padding-secondary;
             position: relative;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-            max-width: 400px;
         }
 
     }
