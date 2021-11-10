@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
-import { useAppStore } from "../../providers/StoreRootProvider";
+//import { useAppStore } from "../../providers/StoreRootProvider";
 
 const MenuLinksComponent = (props) => {
 
-    const appStore = useAppStore();
+    //const appStore = useAppStore();
 
     let offset = -200;
 
