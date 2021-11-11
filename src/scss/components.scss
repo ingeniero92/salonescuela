@@ -110,6 +110,7 @@ ul {
 
     white-space: pre-line;
     margin-bottom: $padding-secondary;
+    word-break: break-word;
 
     .first-text {
         margin-left: $padding-primary;
@@ -152,12 +153,14 @@ ul {
     .images {
 
         display: flex;
-        justify-content: flex-start;
         flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start; // To fix the problem, override the stretch default value with flex-start in the align-items property.
 
         img {
-            align-self: flex-start; // SAFARI: For those who needs to use height auto and parent of image is set to display: flex, this trick will help.
             //justify-self: flex-start; // SAFARI: If your parent of image has set flex-direction: column, you need to do this instead.
+            align-self: flex-start; // SAFARI: For those who needs to use height auto and parent of image is set to display: flex, this trick will help.
             max-width: 400px;
             height: auto;
             padding-bottom: $padding-primary;
