@@ -19,7 +19,7 @@ const ScholarshipComponent = observer(() => {
                 La beca Salønescuela seleccionará entre todos los proyectos presentados uno de ellos para que su autor/a tenga cubiertos el 100% de los gastos de matrícula.
             </span>
             <LadderTextComponent 
-                firstText={"Texto informativo de la beca"}
+                firstText={"Texto informativo de la beca."}
                 secondText={"Está abierta a cualquier persona mayor de edad, independientemente de su lugar de procedencia y nacionalidad.<span class='newLine'></span>Cada participante puede presentarse con un único proyecto.<span class='newLine'></span>Los participantes asumen y aceptan las bases de la convocatoria. Cualquier duda sobre su interpretación será resuelta por Salønescuela de forma inapelable aplicando estas bases de buena fe. El incumplimiento de cualquiera de las bases supone la exclusión inmediata de la convocatoria."}
             />
             <LadderTextComponent 
