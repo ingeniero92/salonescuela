@@ -48,39 +48,10 @@ html {
 }
 
 body {
-    font-family: "GTAmerica", sans-serif;
-    margin: 0;
-    color: $color-primary;
-    background-color: $background-color;
-    background-image: url("/media/img/fondo.png");
-    background-size: 3000%;
-    background-position: center center;
-    background-repeat: no-repeat;
     font-size: $font-size-primary;
-}
-
-@media (min-width: 400px) {
-    body {
-        background-size: 2200%;
-    }   
-}
-
-@media (min-width: 600px) {
-    body {
-        background-size: 1400%;
-    }   
-}
-
-@media (min-width: 800px) {
-    body {
-        background-size: 900%;
-    }   
-}
-
-@media (min-width: 1000px) {
-    body {
-        background-size: 800%;
-    }   
+    font-family: "GTAmerica", sans-serif;
+    color: $color-primary;
+    margin: 0;
 }
 
 /* GENERALS */
@@ -161,10 +132,10 @@ ul {
         img {
             //justify-self: flex-start; // SAFARI: If your parent of image has set flex-direction: column, you need to do this instead.
             align-self: flex-start; // SAFARI: For those who needs to use height auto and parent of image is set to display: flex, this trick will help.
-            max-width: 400px;
             height: auto;
             padding-bottom: $padding-primary;
             padding-right: $padding-primary;
+            width: 70%;
         }
 
     }   

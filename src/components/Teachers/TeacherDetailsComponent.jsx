@@ -16,8 +16,8 @@ const TeacherDetailsComponent = (props) => {
         <div className="teacherDetails">
 
             <div className="nameTitle">
-                <span className="teacherName">{name}.</span>
-                <span className="teacherTitle">{title}.</span>
+                <span className="teacherName">{name}</span>
+                <span className="teacherTitle">{title}</span>
             </div>
 
             <LadderTextComponent 

@@ -13,7 +13,7 @@ const TeachersComponent = observer(() => {
             
             {Object.keys(appStore.tutores).length > 0 &&
                 <React.Fragment>
-                    <span className="title">Tutores {appStore.year}.</span>            
+                    <span className="title">Tutores {appStore.year}</span>            
                     {Object.values(appStore.tutores).map( (value, index) => (
                         <TeacherDetailsComponent key={index} teacher={value}/>
                     ))}      
@@ -22,7 +22,7 @@ const TeachersComponent = observer(() => {
 
             {Object.keys(appStore.invitados).length > 0 &&
                 <React.Fragment>
-                    <span className="title">Profesores invitados {appStore.year}.</span>            
+                    <span className="title">Profesores invitados {appStore.year}</span>            
                     {Object.values(appStore.invitados).map( (value, index) => (
                         <TeacherDetailsComponent key={index} teacher={value}/>
                     ))}   

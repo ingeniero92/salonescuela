@@ -1,19 +1,19 @@
 {
     "year": "2022",
     "telephone": "+34 615 972 686",
-    "email": "se@salonescuela.com",
-    "program": "Programa_2020.pdf",
+    "email": "info.salonescuela@gmail.com",
+    "program": "Dossier_es_20211026.pdf",
     "admission": {
-        "startDate": "(**fecha admision**)"
+        "startDate": "21 de noviembre de 2021"
     },    
     "scholarship": {
-        "startDate": "(**fecha inicio beca**)",
-        "endDate": "(**fecha fin beca**)",
-        "prizeDate": "(**fecha premio**)"
+        "startDate": "22 de noviembre de 2021",
+        "endDate": "10 de enero de 2022",
+        "prizeDate": "17 de enero de 2022"
     },
     "socialNetworks": {
         "facebookURL": "https://www.facebook.com",
-        "instagramURL": "https://www.instagram.com",
+        "instagramURL": "https://www.instagram.com/salon_escuela/",
         "linkedinURL": "https://www.linkedin.com"
     }    
 }

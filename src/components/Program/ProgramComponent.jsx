@@ -17,7 +17,7 @@ const ProgramComponent = observer(() => {
         <section className="section program" id="program">
             <span className="title">Programa Laboratorio de experimentación y producción artística</span>
             <LadderTextComponent 
-                firstText  = {"El Laboratorio de de experimentación y producción artística es una propuesta pedagógica para artistas que quieran expandir su proceso de creación, investigación y formalización de su trabajo."}
+                firstText  = {"El Laboratorio de experimentación y producción artística es una propuesta pedagógica para artistas que quieran expandir su proceso de creación, investigación y formalización de su trabajo."}
                 secondText = {"Trabajaremos con metodologías de investigación y creación radicales, con procesos de trabajo no convencionales (incómodos), revolviendo interiores, movilizando los proyectos a situaciones fuera de la zona de control,y con la búsqueda constante entre diferentes disciplinas para activar el pensamiento, la reflexión y la capacidad de análisis propia (desarrollar una técnica/metodología de trabajo que  permita al alumno/a tener sus propias herramientas para estructurar sus proyectos)"}
             />
             <LadderTextComponent 
