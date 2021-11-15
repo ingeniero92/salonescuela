@@ -1,31 +1,35 @@
 body {
     background-color: rgb(133,84,84);
+    background-repeat: repeat;
     background-image: url("/public/img/background/fondo.png");
-    background-size: 3000%;
-    background-position: center center;
-    background-repeat: no-repeat;
+}
+
+@media (min-width: 300px) {
+    body {
+        background-size: 2000%;
+    }   
 }
 
 @media (min-width: 400px) {
     body {
-        background-size: 2200%;
+        background-size: 1500%;
     }   
 }
 
 @media (min-width: 600px) {
     body {
-        background-size: 1400%;
+        background-size: 1000%;
     }   
 }
 
 @media (min-width: 800px) {
     body {
-        background-size: 900%;
+        background-size: 750%;
     }   
 }
 
 @media (min-width: 1000px) {
     body {
-        background-size: 800%;
+        background-size: 500%;
     }   
 }
