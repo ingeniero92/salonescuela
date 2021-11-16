@@ -16,11 +16,11 @@ const ScholarshipComponent = observer(() => {
         <section className="section scholarship" name="scholarship">
             <span className="title">Beca</span>            
             <span className="text"> 
-                La beca Salønescuela seleccionará entre todos los proyectos presentados uno de ellos para que su autor/a tenga cubiertos el 100% de los gastos de matrícula.
+                La beca salønescuela seleccionará entre todos los proyectos presentados uno de ellos para que su autor/a tenga cubiertos el 100% de los gastos de matrícula.
             </span>
             <LadderTextComponent 
                 firstText={"Texto informativo de la beca."}
-                secondText={"Está abierta a cualquier persona mayor de edad, independientemente de su lugar de procedencia y nacionalidad.<span class='newLine'></span>Cada participante puede presentarse con un único proyecto.<span class='newLine'></span>Los participantes asumen y aceptan las bases de la convocatoria. Cualquier duda sobre su interpretación será resuelta por Salønescuela de forma inapelable aplicando estas bases de buena fe. El incumplimiento de cualquiera de las bases supone la exclusión inmediata de la convocatoria."}
+                secondText={"Está abierta a cualquier persona mayor de edad, independientemente de su lugar de procedencia y nacionalidad.<span class='newLine'></span>Cada participante puede presentarse con un único proyecto.<span class='newLine'></span>Los participantes asumen y aceptan las bases de la convocatoria. Cualquier duda sobre su interpretación será resuelta por salønescuela de forma inapelable aplicando estas bases de buena fe. El incumplimiento de cualquiera de las bases supone la exclusión inmediata de la convocatoria."}
             />
             <LadderTextComponent 
                 firstText={"¿Cómo participar?"}
@@ -44,7 +44,7 @@ const ScholarshipComponent = observer(() => {
                 La convocatoria de la beca está abierta desde el día {startDate} hasta el {endDate}.
             </span>
             <span className="text"> 
-                El jurado está formado por el claustro de Salønescuela y dará a conocer su fallo de forma pública e inapelable a través de la web y redes sociales antes del {prizeDate}.
+                El jurado está formado por el claustro de salønescuela y dará a conocer su fallo de forma pública e inapelable a través de la web y redes sociales antes del {prizeDate}.
             </span>
         </section>
     );

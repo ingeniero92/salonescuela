@@ -8,7 +8,7 @@ export class AppStore {
 
     /* VARS */
 
-    headerTitle         = "SALØNESCUELA";    
+    headerTitle         = "salønescuela";    
     modalIsOpen         = false;
     activeSection       = "init";
     lastActiveSection   = "init";

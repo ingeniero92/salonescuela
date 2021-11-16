@@ -22,7 +22,7 @@ const AdmissionComponent = observer(() => {
                 La inscripción solo puedes realizarla a través del email <a className="link" href={"mailto:" + email}>{email}</a>.
             </span>
             <span className="text"> 
-                Las y los candidatos deberán incorporar a su solicitud los siguientes datos y documentos adjuntos:
+                Las/os candidatos deberán incorporar a su solicitud los siguientes datos y documentos adjuntos:
             </span>
             <ul>
                 <li>Nombre y apellidos</li>
