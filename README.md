@@ -1,4 +1,4 @@
-# SALONESCUELA
+# SALØNESCUELA
 
 Proyecto realizado por José Serrano Álvarez para el artista Enrique Radigales para su nuevo curso.
 
