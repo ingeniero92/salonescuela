@@ -6,6 +6,8 @@ Se ha realizado con React 17 + Hooks, MobX para el manejo del estado y SCSS para
 
 Aunque el proyecto se ha desarrollado con Hooks, la Store de MobX se ha implementado con clases. Hay también un componente (HeaderComponent) que se ha implementado como clase con fines didácticos.
 
+[DEMO](http://salonescuela.com/)
+
 # CRA Documentation 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
