@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import { observer } from "mobx-react";
-import FileSaver from 'file-saver';
+import FileSaver from "file-saver";
 
 const DownloadLinkComponent = observer((props) => {
 

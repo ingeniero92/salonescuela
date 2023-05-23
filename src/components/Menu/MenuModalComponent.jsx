@@ -1,7 +1,7 @@
-import React from 'react';
-import Modal from 'react-modal';
+import React from "react";
+import Modal from "react-modal";
 import { observer } from "mobx-react";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 
 import { useAppStore } from "../../store/RootStoreProvider";
 
@@ -10,7 +10,7 @@ const MenuModalComponent = observer(() => {
     const appStore = useAppStore();
 
     function afterOpenModal(){
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = "hidden";
     }
 
     function closeModal(){

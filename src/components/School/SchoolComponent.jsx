@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import { observer } from "mobx-react";
 
-import LadderTextComponent from '../UI/LadderTextComponent';
+import LadderTextComponent from "../UI/LadderTextComponent";
 
 const SchoolComponent = observer(() => {
 

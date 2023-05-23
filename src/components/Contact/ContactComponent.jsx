@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import { observer } from "mobx-react";
 
-import { useAppStore } from '../../store/RootStoreProvider';
-import SocialNetworksComponent from '../UI/SocialNetworksComponent';
+import { useAppStore } from "../../store/RootStoreProvider";
+import SocialNetworksComponent from "../UI/SocialNetworksComponent";
 
 const ContactComponent = observer(() => {
 

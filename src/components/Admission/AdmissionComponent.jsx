@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import { observer } from "mobx-react";
 
-import { useAppStore } from '../../store/RootStoreProvider';
-import LadderTextComponent from '../UI/LadderTextComponent';
+import { useAppStore } from "../../store/RootStoreProvider";
+import LadderTextComponent from "../UI/LadderTextComponent";
 
 const AdmissionComponent = observer(() => {
 

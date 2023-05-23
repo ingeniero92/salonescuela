@@ -5,7 +5,7 @@ import Header from "./Header/HeaderComponent";
 import Main from "./Main/MainComponent";
 import Footer from "./Footer/FooterComponent";
 
-import '../styles/scss/App.scss';
+import "../styles/scss/App.scss";
 
 function App() {
     return (

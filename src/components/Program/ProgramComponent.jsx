@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import { observer } from "mobx-react";
 
-import { useAppStore } from '../../store/RootStoreProvider';
-import LadderTextComponent from '../UI/LadderTextComponent';
-import DownloadLinkComponent from '../UI/DownloadLinkComponent';
+import { useAppStore } from "../../store/RootStoreProvider";
+import LadderTextComponent from "../UI/LadderTextComponent";
+import DownloadLinkComponent from "../UI/DownloadLinkComponent";
 
 const ProgramComponent = observer(() => {
 

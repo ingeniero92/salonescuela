@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import { observer } from "mobx-react";
-import * as Scroll from 'react-scroll';
+import * as Scroll from "react-scroll";
 
 import { withStore } from "../../store/RootStoreProvider";
-import BaseComponent from '../Base/BaseComponent';
-import MenuLinksComponent from '../Menu/MenuLinksComponent';
+import BaseComponent from "../Base/BaseComponent";
+import MenuLinksComponent from "../Menu/MenuLinksComponent";
 
 var scroll = Scroll.animateScroll;
 

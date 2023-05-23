@@ -114,7 +114,7 @@ export class AppStore {
     }
 
     closeModal(){
-        document.body.style.overflow = 'unset';
+        document.body.style.overflow = "unset";
         this.modalIsOpen = false;
     }      
 

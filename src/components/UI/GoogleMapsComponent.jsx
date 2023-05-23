@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
+import React, { useState } from "react";
+import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/api";
 
 const googleMapsApiKey="";
 
 const containerStyle = {
-    width: '100%',
-    height: '100%'
+    width: "100%",
+    height: "100%"
 };
 
 const center = {

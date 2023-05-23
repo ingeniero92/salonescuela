@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { observer } from "mobx-react";
 
 import { useAppStore } from "../../store/RootStoreProvider";

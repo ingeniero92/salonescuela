@@ -1,5 +1,5 @@
-import React from 'react';
-import GoogleMapReact from 'google-map-react';
+import React from "react";
+import GoogleMapReact from "google-map-react";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -14,7 +14,7 @@ const GoogleMapsCustomMarkersComponent = () => {
     };
 
     return(
-        <div style={{ height: '100vh', width: '100%' }}>
+        <div style={{ height: "100vh", width: "100%" }}>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "AIzaSyCksfw0oCEJMGLnrfNLFGebuTzNxipgIX0" }}
                 defaultCenter={defaultProps.center}
