@@ -2,17 +2,10 @@
     "0": {
         "date": "26/9/2021",
         "title": "Antonio Ballester Moreno se incorpora como profesor invitado a salønescuela.",
-        "description": "ublishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "description": "Graduado en artes por la Universidad Complutense Madrid, Ballester Moreno también desarrolló estudios en la Universität der Künste Berlin con el profesor Lothar Baumgarten de 2000 a 2002. Se incorpora a salønescuela dentro de nuestro Laboratorio de de experimentación y producción artística.",
         "img": "antonio_ballester.jpg",
-        "link": "Enlace",
+        "link": "Antonio Ballester Moreno",
         "url": "http://maisterravalbuena.com/artista/antonio-ballester-moreno/"
-    },
-    "1": {
-        "date": "26/9/2021",
-        "title": "Texto de una noticia con un máximo de 30 palabras",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "link": "Google",
-        "url": "http://www.google.es",
-        "img": "news1.jpg"
     }
+    
 }

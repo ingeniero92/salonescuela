@@ -1,17 +1,12 @@
 import React from 'react';
 import { observer } from "mobx-react";
 
-import { withStore } from "../../providers/StoreRootProvider";
-import BaseComponent from '../Base/BaseComponent';
+const Footer = observer(() => {     
 
-class Footer extends BaseComponent {     
+    return(
+        <footer></footer>
+    );
 
-    render(){
-        return(
-            <footer></footer>
-        );
-    }
+});
 
-}
-
-export default withStore(observer(Footer));
+export default Footer;

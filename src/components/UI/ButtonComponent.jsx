@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from "mobx-react";
 
-import { useAppStore } from "../../providers/StoreRootProvider";
+import { useAppStore } from "../../store/RootStoreProvider";
 
 const Button = observer(() => {
 

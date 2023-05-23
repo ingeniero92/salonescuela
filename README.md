@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# SALONESCUELA
+
+Proyecto realizado por José Serrano Álvarez para el artista Enrique Radigales para su nuevo curso.
+
+Se ha realizado con React 17 + Hooks, MobX para el manejo del estado y SCSS para maquetación.
+
+Aunque el proyecto se ha desarrollado con Hooks, la Store de MobX se ha implementado con clases. Hay también un componente (HeaderComponent) que se ha implementado como clase con fines didácticos.
+
+# DOCUMENTACION DE CRA
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

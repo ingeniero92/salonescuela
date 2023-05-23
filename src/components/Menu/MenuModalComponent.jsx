@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import { observer } from "mobx-react";
 import { Link } from 'react-scroll';
 
-import { useAppStore } from "../../providers/StoreRootProvider";
+import { useAppStore } from "../../store/RootStoreProvider";
 
 const MenuModalComponent = observer(() => {
 

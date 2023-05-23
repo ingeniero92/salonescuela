@@ -1,6 +1,6 @@
 {
   "name": "salonescuela",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -17,7 +17,6 @@
     "mobx": "^6.3.5",
     "mobx-react": "^7.2.1",
     "mobx-react-lite": "^3.2.1",
-    "node-sass": "^6.0.1",
     "raf": "^3.4.1",
     "react": "^17.0.2",
     "react-app-polyfill": "^2.0.0",
@@ -26,11 +25,12 @@
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.4",
     "react-scrollmagic": "^2.3.0",
+    "sass": "^1.62.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

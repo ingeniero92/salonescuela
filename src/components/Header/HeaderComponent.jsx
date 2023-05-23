@@ -2,12 +2,13 @@ import React from 'react';
 import { observer } from "mobx-react";
 import * as Scroll from 'react-scroll';
 
-import { withStore } from "../../providers/StoreRootProvider";
+import { withStore } from "../../store/RootStoreProvider";
 import BaseComponent from '../Base/BaseComponent';
 import MenuLinksComponent from '../Menu/MenuLinksComponent';
 
 var scroll = Scroll.animateScroll;
 
+/* EXAMPLE MOBX STORE USING CLASS COMPONENT INSTEAD FUNCTIONAL COMPONENT WITH HOOK */
 class Header extends BaseComponent {
 
     scrollToTop(){

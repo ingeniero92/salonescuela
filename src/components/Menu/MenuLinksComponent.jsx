@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
-//import { useAppStore } from "../../providers/StoreRootProvider";
+//import { useAppStore } from "../../providers/RootStoreProvider";
 
 const MenuLinksComponent = (props) => {
 

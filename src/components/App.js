@@ -1,19 +1,19 @@
 import React from "react";
 
-import { StoreRootProvider } from "../providers/StoreRootProvider";
+import { RootStoreProvider } from "../store/RootStoreProvider";
 import Header from "./Header/HeaderComponent";
 import Main from "./Main/MainComponent";
 import Footer from "./Footer/FooterComponent";
 
-import '../scss/App.scss';
+import '../styles/scss/App.scss';
 
 function App() {
     return (
-        <StoreRootProvider>
+        <RootStoreProvider>
             <Header />
             <Main />
             <Footer />
-        </StoreRootProvider>
+        </RootStoreProvider>
     );
 }
  

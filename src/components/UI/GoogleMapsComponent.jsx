@@ -1,4 +1,4 @@
-import React, {useState } from 'react'
+import React, { useState } from 'react'
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 
 const googleMapsApiKey="";
@@ -13,7 +13,7 @@ const center = {
     lng: -3.709947
 };
 
-function MyComponent() {
+function GoogleMapsComponent() {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -57,4 +57,4 @@ function MyComponent() {
     )
 }
 
-export default MyComponent;
+export default GoogleMapsComponent;

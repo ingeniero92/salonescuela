@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from "mobx-react";
 
-import { useWindowDimensions } from "../../providers/HooksProvider";
+import { useWindowDimensions } from "../../hooks/HooksProvider";
 import MenuLinksComponent from './MenuLinksComponent';
 
 const MenuLeftComponent = observer(() => {

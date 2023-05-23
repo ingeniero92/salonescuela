@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { RootStore } from "../../stores/RootStore";
+import { RootStore } from "../../store/RootStore";
 
 class BaseComponent extends React.Component {
 

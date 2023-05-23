@@ -59,7 +59,7 @@ export class AppStore {
 
     /* FETCH */
 
-    fetchSettings(){
+    async fetchSettings(){
         fetch("/public/json/settings.json")
             .then(res => res.json())
             .then(data => runInAction(() => {    
