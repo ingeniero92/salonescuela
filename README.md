@@ -1,6 +1,6 @@
 # SALØNESCUELA
 
-Proyecto realizado por José Serrano Álvarez para el artista Enrique Radigales, el cual consiste en una web de información su nuevo curso.
+Proyecto realizado por José Serrano Álvarez para el artista Enrique Radigales, el cual consiste en una web de información de su nuevo curso.
 
 Se ha realizado con React 17 + Hooks, MobX para el manejo del estado y SCSS para maquetación, entre otros paquetes.
 
